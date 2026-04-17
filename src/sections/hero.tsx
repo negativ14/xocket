@@ -18,7 +18,7 @@ export default function Hero() {
                                 className="inline-block w-3 h-3 bg-foreground shrink-0"
                                 aria-hidden="true"
                             />
-                            <p className="font-mono text-[10px] xl:text-sm uppercase text-foreground leading-none">
+                            <p className="font-mono text-xs xl:text-sm uppercase text-foreground leading-none">
                                 From Idea → MVP or Execution Sprints for Scaling Startups.
                             </p>
                         </div>
