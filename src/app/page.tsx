@@ -4,6 +4,7 @@ import Comparison from "@/sections/comparison";
 import Hero from "@/sections/hero";
 import HowWeWork from "@/sections/how-we-work";
 import WhoWeWorkWith from "@/sections/who-we-work-with";
+import WorkWithUs from "@/sections/work-with-us";
 
 export default function Home() {
   return <main>
@@ -13,5 +14,6 @@ export default function Home() {
     <Solution />
     <WhoWeWorkWith />
     <Comparison />
+    <WorkWithUs />
   </main>
 }

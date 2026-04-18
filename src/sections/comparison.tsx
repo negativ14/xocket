@@ -9,11 +9,8 @@ import {
     RefreshCw,
 } from "lucide-react";
 import Container from "@/components/container";
-import { FrameMarker } from "@/components/frame";
 import Layers from "@/assets/icons/layers";
-import DownArrow from "@/assets/icons/down-arrow";
 import Heading from "@/components/heading";
-import Logo from "@/assets/icons/logo";
 import LogoIcon from "@/assets/images/logo-icon.svg";
 import Image from "next/image";
 
@@ -100,7 +97,7 @@ function ComparisonItem({
 function Stat({ value, label }: StatItem) {
     return (
         <div className="flex flex-col items-center gap-1.5">
-            <span className="font-sans text-[40px] font-medium text-foreground">{value}</span>
+            <span className="font-mono text-[40px] font-medium text-foreground">{value}</span>
             <span className="font-sans text-lg text-foreground/80">{label}</span>
         </div>
     );

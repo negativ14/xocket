@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 export default function SubHeading({ children, as = "p", variant = "medium", className }: { children: React.ReactNode, as?: "p" | "h3" | "h2", variant?: "small" | "medium" | "big", className?: string }) {
 
     const variants = {
-        big: "text-base md:text-lg",
+        big: "text-base md:text-lg lg:text-xl",
         medium: "text-sm md:text-base",
         small: "text-xs md:text-sm",
     };

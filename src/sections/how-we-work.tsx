@@ -6,6 +6,8 @@ import Container from "@/components/container";
 import howWeWork1 from "@/assets/images/how-we-work.jpg";
 import howWeWork2 from "@/assets/images/how-we-work-2.jpg";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import Heading from "@/components/heading";
+import SubHeading from "@/components/sub-heading";
 
 // ── Types ─────────────────────────────────────────────────
 interface Step {
@@ -80,18 +82,18 @@ export default function HowWeWork() {
                         </div>
 
                         {/* Heading — static */}
-                        <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] leading-[1.1] text-foreground mb-6">
+                        <Heading variant="big" className="text-foreground mb-6">
                             <span className="text-foreground/40">A System Built for </span>
                             <span className="text-foreground">Structured</span>
                             <br />
                             <span className="text-foreground">Execution</span>
-                        </h2>
+                        </Heading>
 
                         {/* Subtext — static */}
-                        <p className="font-sans text-sm xl:text-lg text-foreground/60 leading-relaxed max-w-[600px]">
+                        <SubHeading variant="big" className="font-sans text-foreground/80 max-w-[680px]">
                             A structured approach to building products where design, engineering, and
                             scalability are considered from day one.
-                        </p>
+                        </SubHeading>
 
                         {/* Spacer */}
                         <div className="flex-1" />

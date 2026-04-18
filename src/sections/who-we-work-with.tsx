@@ -5,6 +5,7 @@ import Peoples from "@/assets/icons/peoples";
 import { TrendingUp, Building2 } from "lucide-react";
 import { ElementType } from "react";
 import { FrameMarker } from "@/components/frame";
+import SubHeading from "@/components/sub-heading";
 
 // ── Types ──────────────────────────────────────────────────
 interface Card {
@@ -129,10 +130,10 @@ export default function WhoWeWorkWith() {
                     </Heading>
 
                     {/* Subtext */}
-                    <p className="font-sans text-lg text-foreground/80 leading-relaxed max-w-[500px]">
+                    <SubHeading variant="big" className="font-sans text-foreground/80 max-w-[580px]">
                         We partner with teams that care about building products the
                         right way from the start.
-                    </p>
+                    </SubHeading>
                 </div>
 
                 {/* ── Cards with border + corner brackets ── */}
