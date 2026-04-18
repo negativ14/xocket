@@ -84,9 +84,9 @@ export default function HowWeWork() {
                         {/* Heading — static */}
                         <Heading variant="big" className="text-foreground mb-6">
                             <span className="text-foreground/40">A System Built for </span>
-                            <span className="text-foreground">Structured</span>
+                            <span className="text-foreground italic">Structured</span>
                             <br />
-                            <span className="text-foreground">Execution</span>
+                            <span className="text-foreground italic">Execution</span>
                         </Heading>
 
                         {/* Subtext — static */}

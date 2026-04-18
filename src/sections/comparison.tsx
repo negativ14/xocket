@@ -126,11 +126,11 @@ export default function Comparison() {
                         {/* Mixed-typography heading */}
                         <Heading variant="big" className="text-neutral-400 lg:text-[48px]">
                             <span className="text-neutral-400">Move </span>
-                            <span className="font-heading text-foreground">Faster </span>
+                            <span className="font-heading text-foreground italic">Faster </span>
                             Without Breaking
                             <br />
                             Your{" "}
-                            <span className="font-heading text-foreground">Product</span>
+                            <span className="font-heading text-foreground italic">Product</span>
                         </Heading>
 
                         <p className="font-sans text-lg text-foreground/80 leading-relaxed lg:pt-2 max-w-[480px]">

@@ -184,7 +184,7 @@ export default function WorkWithUs() {
                     <Heading as="h2" variant="big" className="text-neutral-400 text-center">
                         How You Can Work
                         <br />
-                        With <span className="text-foreground">Us</span>
+                        With <span className="text-foreground italic">Us</span>
                     </Heading>
 
                     {/* Subtext */}

@@ -24,8 +24,8 @@ export default function Hero() {
                         </div>
 
                         {/* Heading */}
-                        <Heading variant="big" as="h1" className="">
-                            <span className="text-neutral-400">Structured Execution{" "}</span>
+                        <Heading variant="big" as="h1" className="italic">
+                            <span className="text-neutral-400 not-italic">Structured Execution{" "}</span>
                             <span>for</span>
                             <br />
                             Growing Startups

@@ -126,7 +126,7 @@ export default function WhoWeWorkWith() {
                     {/* Heading */}
                     <Heading as="h2" variant="big" className="leading-tight">
                         <span className="text-neutral-400">Who We Work </span>
-                        <span className="text-foreground">With</span>
+                        <span className="text-foreground italic">With</span>
                     </Heading>
 
                     {/* Subtext */}
