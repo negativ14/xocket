@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import Logo from "@/assets/icons/logo";
+import Image from "next/image";
+import LogoIcon from "@/assets/images/logo.svg";
 import Container from "@/components/container";
 import { useState } from "react";
 
@@ -21,7 +22,7 @@ export default function Navbar() {
                 <nav className="flex items-center justify-between py-7" aria-label="Main navigation">
                     {/* Logo */}
                     <Link href="/" aria-label="Xocket home" className="shrink-0">
-                        <Logo className="h-[40px] w-auto" />
+                        <Image src={LogoIcon} alt="logo" className="h-[40px] w-auto" />
                     </Link>
 
                     {/* Center Nav Links — hidden on mobile */}

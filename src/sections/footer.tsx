@@ -4,7 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import Container from "@/components/container";
 import Heading from "@/components/heading";
 import SubHeading from "@/components/sub-heading";
-import Logo from "@/assets/icons/logo";
+import LogoIcon from "@/assets/images/logo.svg";
 import heroImage from "@/assets/images/hero-1.jpg";
 
 // ── Nav Data ────────────────────────────────────────────────
@@ -105,7 +105,7 @@ export default function Footer() {
                         Let&apos;s Build Something That
                         <br />
                         Actually{" "}
-                        <span className="italic text-white italic">Scales</span>
+                        <span className="italic text-white">Scales</span>
                     </Heading>
 
                     {/* Subtext */}
@@ -134,7 +134,7 @@ export default function Footer() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
                         {/* Logo */}
                         <div className="flex items-start">
-                            <Logo className="h-10 w-auto" />
+                            <Image src={LogoIcon} alt="Xocket" className="h-10 w-auto" />
                         </div>
 
                         {/* Navigation */}
