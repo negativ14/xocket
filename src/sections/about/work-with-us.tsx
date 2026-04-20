@@ -1,8 +1,7 @@
-import Image from "next/image";
+
 import Container from "@/components/container";
 import Heading from "@/components/heading";
 import SubHeading from "@/components/sub-heading";
-import heroImage from "@/assets/images/hero-1.jpg";
 import { Plan, PlanCard } from "../work-with-us";
 
 // ── Data ───────────────────────────────────────────────────
