@@ -5,9 +5,10 @@ import Image from "next/image";
 import LogoIcon from "@/assets/images/logo.svg";
 import Container from "@/components/container";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
-    { label: "MVP", href: "#mvp" },
+    { label: "MVP", href: "/mvp" },
     { label: "Execution", href: "#execution" },
     { label: "Case Studies", href: "#case-studies" },
     { label: "About", href: "#about" },
@@ -15,6 +16,7 @@ const navLinks = [
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+    const pathname = usePathname();
 
     return (
         <header className="sticky top-0 z-50 w-full bg-background border-b border-border/40">
@@ -27,16 +29,26 @@ export default function Navbar() {
 
                     {/* Center Nav Links — hidden on mobile */}
                     <ul className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
-                        {navLinks.map((link) => (
-                            <li key={link.href}>
-                                <Link
-                                    href={link.href}
-                                    className="font-mono tracking-wide text-muted-foreground hover:text-foreground transition-colors duration-200"
-                                >
-                                    {link.label}
-                                </Link>
-                            </li>
-                        ))}
+                        {navLinks.map((link) => {
+                            const isActive = link.href.startsWith("/")
+                                ? pathname === link.href
+                                : false;
+                            return (
+                                <li key={link.href}>
+                                    <Link
+                                        href={link.href}
+                                        className={[
+                                            "font-mono tracking-wide transition-colors duration-200 relative pb-0.5",
+                                            isActive
+                                                ? "text-foreground"
+                                                : "text-muted-foreground hover:text-foreground",
+                                        ].join(" ")}
+                                    >
+                                        {link.label}
+                                    </Link>
+                                </li>
+                            );
+                        })}
                     </ul>
 
                     {/* CTA + Hamburger */}
@@ -65,16 +77,26 @@ export default function Navbar() {
                 {/* Mobile menu */}
                 {isOpen && (
                     <div className="md:hidden border-t border-border/40 py-6 flex flex-col gap-4">
-                        {navLinks.map((link) => (
-                            <Link
-                                key={link.href}
-                                href={link.href}
-                                onClick={() => setIsOpen(false)}
-                                className="font-mono text-sm tracking-wide text-foreground/80 hover:text-foreground transition-colors duration-200 uppercase"
-                            >
-                                {link.label}
-                            </Link>
-                        ))}
+                        {navLinks.map((link) => {
+                            const isActive = link.href.startsWith("/")
+                                ? pathname === link.href
+                                : false;
+                            return (
+                                <Link
+                                    key={link.href}
+                                    href={link.href}
+                                    onClick={() => setIsOpen(false)}
+                                    className={[
+                                        "font-mono text-sm tracking-wide transition-colors duration-200 uppercase",
+                                        isActive
+                                            ? "text-foreground"
+                                            : "text-foreground/80 hover:text-foreground",
+                                    ].join(" ")}
+                                >
+                                    {link.label}
+                                </Link>
+                            );
+                        })}
                         <Link
                             href="#book-a-call"
                             className="mt-2 inline-flex items-center justify-center border border-foreground px-5 py-3 font-mono text-xs tracking-widest uppercase text-foreground hover:bg-foreground hover:text-background transition-colors duration-200 self-start"
