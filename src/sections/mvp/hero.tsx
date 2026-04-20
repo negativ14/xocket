@@ -3,6 +3,7 @@ import Link from "next/link";
 import Container from "@/components/container";
 import mvpHeroImage from "@/assets/images/mvp-hero.svg";
 import Heading from "@/components/heading";
+import SubHeading from "@/components/sub-heading";
 
 export default function MvpHero() {
     return (
@@ -11,9 +12,9 @@ export default function MvpHero() {
                 {/* Main Hero grid — left content / right image */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-0 py-16 lg:py-0 min-h-[750px]">
                     {/* ── Left Column ────────────────────────────── */}
-                    <div className="flex flex-col justify-center gap-8 lg:pr-16">
+                    <div className="flex flex-col justify-center gap-4 lg:pr-16">
                         {/* Tag badge */}
-                        <div className="flex items-center gap-2.5 bg-muted py-1.5 px-2 w-fit">
+                        <div className="flex items-center gap-2.5 bg-muted py-1.5 px-2 w-fit mb-2">
                             <span
                                 className="inline-block w-3 h-3 bg-foreground shrink-0"
                                 aria-hidden="true"
@@ -31,13 +32,13 @@ export default function MvpHero() {
                         </Heading>
 
                         {/* Subheading */}
-                        <p className="font-sans text-sm xl:text-[18px] text-foreground/60 leading-relaxed max-w-[540px]">
+                        <SubHeading variant="big" className="font-sans text-foreground/60 max-w-[600px]">
                             We design, build, and launch investor-ready products — engineered for scale,
                             speed, and real-world use from day one.
-                        </p>
+                        </SubHeading>
 
                         {/* CTA Buttons */}
-                        <div className="flex flex-wrap items-center gap-5 pt-2">
+                        <div className="flex flex-wrap items-center gap-5 pt-8">
                             <Link
                                 href="#start-mvp"
                                 className="inline-flex items-center gap-2 bg-foreground text-background font-mono tracking-wide uppercase px-6 py-3.5 hover:opacity-90 transition-opacity duration-200"
