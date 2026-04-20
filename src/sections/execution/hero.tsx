@@ -47,7 +47,7 @@ export default function ExecutionHero() {
 
                             <Link
                                 href="#book-a-call"
-                                className="inline-flex items-center gap-3 text-white font-mono text-sm md:text-base uppercase px-7 py-4 bg-[#1C1C1C] hover:bg-white hover:text-black transition-colors duration-200"
+                                className="inline-flex items-center gap-3 text-white font-mono text-sm md:text-base uppercase px-7 py-4 bg-muted hover:bg-white hover:text-black transition-colors duration-200"
                             >
                                 BOOK STRATEGY CALL
                                 <ArrowUpRight className="w-[18px] h-[18px]" strokeWidth={1.5} />

@@ -7,7 +7,7 @@ import SubHeading from "@/components/sub-heading";
 import heroImage from "@/assets/images/hero-1.jpg";
 
 // ── Types ──────────────────────────────────────────────────
-interface Plan {
+export interface Plan {
     title: string;
     subtitle: string;
     features: string[];
@@ -55,7 +55,7 @@ const plans: Plan[] = [
 ];
 
 // ── Reusable Plan Card ─────────────────────────────────────
-function PlanCard({ plan }: { plan: Plan }) {
+export function PlanCard({ plan }: { plan: Plan }) {
     const { title, subtitle, features, cta, href, featured } = plan;
 
     if (featured) {
