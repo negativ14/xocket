@@ -4,6 +4,7 @@ import Container from "@/components/container";
 import heroImage from "@/assets/images/hero-1.jpg";
 import Heading from "@/components/heading";
 import SubHeading from "@/components/sub-heading";
+import Eyebrow from "@/components/eyebrow";
 
 export default function Hero() {
     return (
@@ -14,15 +15,9 @@ export default function Hero() {
                     {/* ── Left Column ────────────────────────────── */}
                     <div className="flex flex-col justify-center gap-4 lg:pr-16">
                         {/* Tag badge */}
-                        <div className="flex items-center gap-2.5 bg-muted py-1.5 px-2 w-fit mb-2">
-                            <span
-                                className="inline-block w-3 h-3 bg-foreground shrink-0"
-                                aria-hidden="true"
-                            />
-                            <p className="font-mono text-xs xl:text-sm uppercase text-foreground leading-none">
-                                From Idea → MVP or Execution Sprints for Scaling Startups.
-                            </p>
-                        </div>
+                        <Eyebrow className="mb-2">
+                            From Idea → MVP or Execution Sprints for Scaling Startups.
+                        </Eyebrow>
 
                         {/* Heading */}
                         <Heading variant="big" as="h1" className="italic">

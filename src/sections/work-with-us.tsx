@@ -5,6 +5,7 @@ import Container from "@/components/container";
 import Heading from "@/components/heading";
 import SubHeading from "@/components/sub-heading";
 import heroImage from "@/assets/images/hero-1.jpg";
+import Eyebrow from "@/components/eyebrow";
 
 // ── Types ──────────────────────────────────────────────────
 export interface Plan {
@@ -169,16 +170,10 @@ export default function WorkWithUs() {
             <Container className="relative z-10">
                 {/* ── Centered header ── */}
                 <div className="flex flex-col items-center text-center gap-6 mb-14">
-                    {/* Tag */}
-                    <div className="flex items-center gap-2.5 bg-white/10 px-2 py-1.5 w-fit">
-                        <span
-                            className="inline-block w-3 h-3 bg-white shrink-0"
-                            aria-hidden="true"
-                        />
-                        <p className="font-mono text-xs xl:text-sm uppercase tracking-widest text-white leading-none">
-                            Execution Paths
-                        </p>
-                    </div>
+                    <Eyebrow className="mb-2">
+                        Execution Paths
+                    </Eyebrow>
+
 
                     {/* Heading */}
                     <Heading as="h2" variant="big" className="text-neutral-400 text-center">

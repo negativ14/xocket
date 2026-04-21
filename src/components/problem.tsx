@@ -1,4 +1,5 @@
 import Container from "@/components/container";
+import Eyebrow from "./eyebrow";
 
 export default function Problem() {
     return (
@@ -6,15 +7,9 @@ export default function Problem() {
             <Container>
                 <div className="flex flex-col gap-8">
                     {/* Section tag */}
-                    <div className="flex items-center gap-2.5 bg-muted px-2 py-1.5 w-fit">
-                        <span
-                            className="inline-block w-3 h-3 bg-foreground shrink-0"
-                            aria-hidden="true"
-                        />
-                        <p className="font-mono text-xs xl:text-sm uppercase tracking-widest text-foreground leading-none">
-                            The Problem
-                        </p>
-                    </div>
+                    <Eyebrow className="mb-2">
+                        The Problem
+                    </Eyebrow>
 
                     {/* Body copy */}
                     <p className="font-sans text-xl md:text-2xl lg:text-[32px] text-foreground">

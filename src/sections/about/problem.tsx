@@ -1,4 +1,5 @@
 import Container from "@/components/container";
+import Eyebrow from "@/components/eyebrow";
 import Heading from "@/components/heading";
 
 export default function AboutProblem() {
@@ -7,15 +8,9 @@ export default function AboutProblem() {
             <Container>
                 <div className="flex flex-col gap-6 mb-12">
                     {/* Tag */}
-                    <div className="flex items-center gap-2.5 bg-muted px-2.5 py-1.5 w-fit">
-                        <span
-                            className="inline-block w-2.5 h-2.5 bg-white shrink-0"
-                            aria-hidden="true"
-                        />
-                        <p className="font-mono text-xs xl:text-sm uppercase tracking-widest text-white leading-none mt-0.5">
-                            THE PROBLEM
-                        </p>
-                    </div>
+                    <Eyebrow className="mb-2">
+                        THE PROBLEM
+                    </Eyebrow>
 
                     {/* header */}
                     <div className="flex flex-col gap-8">

@@ -1,4 +1,5 @@
 import Container from "@/components/container";
+import Eyebrow from "@/components/eyebrow";
 import Heading from "@/components/heading";
 import { CheckCircle2 } from "lucide-react";
 import React from "react";
@@ -61,15 +62,9 @@ export default function MvpTimeline() {
                 {/* Header section (Two columns) */}
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-10 mb-20 lg:mb-28">
                     <div className="flex flex-col gap-6">
-                        <div className="flex items-center gap-2.5 mb-2 bg-muted w-fit px-2.5 py-1.5">
-                            <span
-                                className="inline-block w-2.5 h-2.5 bg-white shrink-0"
-                                aria-hidden="true"
-                            />
-                            <p className="font-mono text-xs xl:text-sm uppercase tracking-widest text-white leading-none">
-                                Timeline
-                            </p>
-                        </div>
+                        <Eyebrow className="mb-2">
+                            Timeline
+                        </Eyebrow>
                         <Heading as="h2" variant="big" className="font-normal leading-none tracking-tight">
                             <span className="text-neutral-400 block mb-1.5">MVP Project</span>
                             <span className="text-white block">Timeline</span>

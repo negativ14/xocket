@@ -5,22 +5,20 @@ import { ArrowUpRight } from "lucide-react";
 import Container from "@/components/container";
 import Heading from "@/components/heading";
 import buildingsImage from "@/assets/images/buildings.png";
+import Eyebrow from "@/components/eyebrow";
 
 export default function ContactUsHero() {
     return (
         <section className="w-full bg-background py-18">
             <Container>
                 <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-stretch">
-                    
+
                     {/* LEFT COLUMN */}
                     <div className="flex flex-col col-span-2">
                         {/* Tag */}
-                        <div className="flex items-center gap-2.5 bg-muted px-2.5 py-1.5 w-fit mb-8">
-                            <span className="inline-block w-2.5 h-2.5 bg-white shrink-0" aria-hidden="true" />
-                            <p className="font-mono text-xs xl:text-sm uppercase tracking-widest text-white leading-none mt-0.5">
-                                CONTACT US
-                            </p>
-                        </div>
+                        <Eyebrow className="mb-2">
+                            CONTACT US
+                        </Eyebrow>
 
                         {/* Heading */}
                         <Heading as="h1" variant="big" className="font-normal leading-[1.1] tracking-tight mb-6 text-5xl lg:text-[64px]">
@@ -75,30 +73,30 @@ export default function ContactUsHero() {
                                 {/* Name */}
                                 <div className="flex flex-col gap-2.5">
                                     <label className="font-mono tracking-widest uppercase text-white font-medium">NAME</label>
-                                    <input 
-                                        type="text" 
-                                        placeholder="input your name" 
-                                        className="bg-transparent border border-white/10 px-4 py-3.5 text-white font-sans text-sm focus:outline-none focus:border-white/30 placeholder:text-white/40 transition-colors" 
+                                    <input
+                                        type="text"
+                                        placeholder="input your name"
+                                        className="bg-transparent border border-white/10 px-4 py-3.5 text-white font-sans text-sm focus:outline-none focus:border-white/30 placeholder:text-white/40 transition-colors"
                                     />
                                 </div>
 
                                 {/* Email */}
                                 <div className="flex flex-col gap-2.5">
                                     <label className="font-mono tracking-widest uppercase text-white font-medium">EMAIL</label>
-                                    <input 
-                                        type="email" 
-                                        placeholder="input your email adress" 
-                                        className="bg-transparent border border-white/10 px-4 py-3.5 text-white font-sans text-sm focus:outline-none focus:border-white/30 placeholder:text-white/40 transition-colors" 
+                                    <input
+                                        type="email"
+                                        placeholder="input your email adress"
+                                        className="bg-transparent border border-white/10 px-4 py-3.5 text-white font-sans text-sm focus:outline-none focus:border-white/30 placeholder:text-white/40 transition-colors"
                                     />
                                 </div>
 
                                 {/* Company */}
                                 <div className="flex flex-col gap-2.5">
                                     <label className="font-mono tracking-widest uppercase text-white font-medium">COMPANY</label>
-                                    <input 
-                                        type="text" 
-                                        placeholder="input your email adress" 
-                                        className="bg-transparent border border-white/10 px-4 py-3.5 text-white font-sans text-sm focus:outline-none focus:border-white/30 placeholder:text-white/40 transition-colors" 
+                                    <input
+                                        type="text"
+                                        placeholder="input your email adress"
+                                        className="bg-transparent border border-white/10 px-4 py-3.5 text-white font-sans text-sm focus:outline-none focus:border-white/30 placeholder:text-white/40 transition-colors"
                                     />
                                 </div>
 
@@ -106,7 +104,7 @@ export default function ContactUsHero() {
                                 <div className="flex flex-col gap-2.5">
                                     <label className="font-mono tracking-widest uppercase text-white font-medium">PRICING</label>
                                     <div className="relative">
-                                        <select 
+                                        <select
                                             className="bg-transparent border border-white/10 px-4 py-3.5 text-white/40 font-sans text-sm w-full appearance-none focus:outline-none focus:border-white/30 transition-colors cursor-pointer"
                                             defaultValue=""
                                         >
@@ -117,7 +115,7 @@ export default function ContactUsHero() {
                                             <option value="4" className="bg-[#111111] text-white">$50k+</option>
                                         </select>
                                         <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-white/60"><path d="m6 9 6 6 6-6"/></svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-white/60"><path d="m6 9 6 6 6-6" /></svg>
                                         </div>
                                     </div>
                                 </div>
@@ -125,8 +123,8 @@ export default function ContactUsHero() {
                                 {/* Project Description */}
                                 <div className="flex flex-col gap-2.5 mb-2">
                                     <label className="font-mono tracking-widest uppercase text-white font-medium">PROJECT DESCRIPTION</label>
-                                    <textarea 
-                                        rows={6} 
+                                    <textarea
+                                        rows={6}
                                         className="bg-transparent border border-white/10 px-4 py-3.5 text-white font-sans text-sm resize-none focus:outline-none focus:border-white/30 transition-colors"
                                     ></textarea>
                                 </div>
@@ -139,7 +137,7 @@ export default function ContactUsHero() {
                             </form>
                         </div>
                     </div>
-                    
+
                 </div>
             </Container>
         </section>

@@ -2,6 +2,8 @@ import Image from "next/image";
 import Container from "@/components/container";
 import Heading from "@/components/heading";
 import heroImage from "@/assets/images/hero-1.jpg";
+import Eyebrow from "@/components/eyebrow";
+import FeatureCard from "@/components/feature-card";
 
 const cards = [
     {
@@ -51,15 +53,9 @@ export default function AboutPhiloshophy() {
                 {/* ── Top Area: tag + heading/subtext ── */}
                 <div className="flex flex-col gap-10 mb-12">
                     {/* Tag */}
-                    <div className="flex items-center gap-2.5 bg-muted px-2.5 py-1.5 w-fit">
-                        <span
-                            className="inline-block w-2.5 h-2.5 bg-white shrink-0"
-                            aria-hidden="true"
-                        />
-                        <p className="font-mono text-xs xl:text-sm uppercase tracking-widest text-white leading-none mt-0.5">
-                            OUR PHILOSOPHY
-                        </p>
-                    </div>
+                    <Eyebrow className="mb-2">
+                        OUR PHILOSOPHY
+                    </Eyebrow>
 
                     {/* heading */}
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-end">
@@ -73,17 +69,7 @@ export default function AboutPhiloshophy() {
                 {/* ── Cards ── */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {cards.map(({ title, body }) => (
-                        <div
-                            key={title}
-                            className="flex flex-col gap-2 bg-white p-6 min-h-[160px]"
-                        >
-                            <h3 className="font-mono text-xl font-semibold text-background tracking-tighter leading-snug">
-                                {title}
-                            </h3>
-                            <p className="font-sans text-lg text-background/60 leading-relaxed">
-                                {body}
-                            </p>
-                        </div>
+                        <FeatureCard key={title} title={title} body={body} />
                     ))}
                 </div>
             </Container>

@@ -6,6 +6,7 @@ import { TrendingUp, Building2 } from "lucide-react";
 import { ElementType } from "react";
 import { FrameMarker } from "@/components/frame";
 import SubHeading from "@/components/sub-heading";
+import Eyebrow from "@/components/eyebrow";
 
 // ── Types ──────────────────────────────────────────────────
 interface Card {
@@ -112,6 +113,9 @@ export default function MvpWhoWeWorkWith() {
                 {/* ── Header — centered ── */}
                 <div className="flex flex-col items-center text-center gap-6 mb-14">
                     {/* Tag */}
+                    <Eyebrow className="mb-2">
+                        Who We Work For
+                    </Eyebrow>
                     <div className="flex items-center gap-2.5 bg-muted px-2 py-1.5 w-fit">
                         <span
                             className="inline-block w-3 h-3 bg-foreground shrink-0"

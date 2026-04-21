@@ -4,6 +4,7 @@ import Container from "@/components/container";
 import howWeWorkImage from "@/assets/images/how-we-work.jpg";
 import Heading from "@/components/heading";
 import { ArrowUpRight } from "lucide-react";
+import Eyebrow from "@/components/eyebrow";
 
 export default function ExecutionHero() {
     return (
@@ -14,15 +15,10 @@ export default function ExecutionHero() {
                     {/* ── Left Column ────────────────────────────── */}
                     <div className="flex flex-col justify-center gap-4 lg:pr-10">
                         {/* Tag badge */}
-                        <div className="flex items-center gap-2.5 bg-[#1C1C1C] py-1.5 px-2.5 w-fit mb-4">
-                            <span
-                                className="inline-block w-2.5 h-2.5 bg-white shrink-0"
-                                aria-hidden="true"
-                            />
-                            <p className="font-mono text-xs xl:text-sm uppercase text-neutral-300 leading-none mt-0.5 tracking-wider">
-                                FROM MVP → EXECUTION SPRINTS FOR SCALING STARTUPS.
-                            </p>
-                        </div>
+                        <Eyebrow className="mb-2">
+                            FROM MVP → EXECUTION SPRINTS FOR SCALING STARTUPS.
+                        </Eyebrow>
+
 
                         {/* Heading */}
                         <Heading variant="big" as="h1" className="text-neutral-400 font-normal leading-[1.1] tracking-tight max-w-[600px]">

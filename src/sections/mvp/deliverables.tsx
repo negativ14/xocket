@@ -4,6 +4,7 @@ import { CircleCheck, ArrowUpRight } from "lucide-react";
 import Container from "@/components/container";
 import Heading from "@/components/heading";
 import heroImage from "@/assets/images/hero-1.jpg";
+import Eyebrow from "@/components/eyebrow";
 
 const deliverablesData = [
     "Working MVP product",
@@ -44,15 +45,9 @@ export default function Deliverables() {
                 {/* ── Centered header ── */}
                 <div className="flex flex-col items-center text-center gap-5 lg:gap-6 mb-12 lg:mb-16">
                     {/* Tag */}
-                    <div className="flex items-center gap-3 w-fit bg-muted px-2.5 py-1.5">
-                        <span
-                            className="inline-block w-2.5 h-2.5 bg-white shrink-0"
-                            aria-hidden="true"
-                        />
-                        <p className="font-mono text-xs xl:text-sm uppercase tracking-widest text-white leading-none">
-                            WHAT YOU GET
-                        </p>
-                    </div>
+                    <Eyebrow className="mb-2">
+                        WHAT YOU GET
+                    </Eyebrow>
 
                     {/* Heading */}
                     <Heading as="h2" variant="big" className="text-white font-normal leading-tight tracking-tight">

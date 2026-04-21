@@ -13,6 +13,7 @@ import Layers from "@/assets/icons/layers";
 import Heading from "@/components/heading";
 import LogoIcon from "@/assets/images/logo-icon.svg";
 import Image from "next/image";
+import Eyebrow from "@/components/eyebrow";
 
 
 // ── Types ──────────────────────────────────────────────────
@@ -111,15 +112,10 @@ export default function Comparison() {
                 {/* ── Header: tag + 2-col (heading | subtext) ── */}
                 <div className="flex flex-col gap-8 mb-14">
                     {/* Tag */}
-                    <div className="flex items-center gap-2.5 bg-muted px-2 py-1.5 w-fit">
-                        <span
-                            className="inline-block w-3 h-3 bg-foreground shrink-0"
-                            aria-hidden="true"
-                        />
-                        <p className="font-mono text-xs xl:text-sm uppercase tracking-widest text-foreground leading-none">
-                            We vs Others
-                        </p>
-                    </div>
+                    <Eyebrow>
+                        We vs Others
+                    </Eyebrow>
+
 
                     {/* Two-column: heading | subtext */}
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-end">

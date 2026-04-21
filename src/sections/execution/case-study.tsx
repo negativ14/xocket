@@ -6,6 +6,7 @@ import Heading from "@/components/heading";
 import product1 from "@/assets/images/product-1.jpg";
 import product2 from "@/assets/images/product-2.jpg";
 import SubHeading from "@/components/sub-heading";
+import Eyebrow from "@/components/eyebrow";
 
 // ── Data ───────────────────────────────────────────────────
 const caseStudies = [
@@ -21,15 +22,9 @@ export default function ExecutionCaseStudies() {
                 {/* ── Header ── */}
                 <div className="flex flex-col gap-6 mb-16">
                     {/* Tag */}
-                    <div className="flex items-center gap-2.5 w-fit bg-muted px-2.5 py-1.5">
-                        <span
-                            className="inline-block w-2.5 h-2.5 bg-white shrink-0"
-                            aria-hidden="true"
-                        />
-                        <p className="font-mono text-xs uppercase tracking-widest text-white leading-none mt-0.5">
-                            CASE STUDIES
-                        </p>
-                    </div>
+                    <Eyebrow className="mb-2">
+                        CASE STUDIES
+                    </Eyebrow>
 
                     {/* Heading — left-aligned */}
                     <Heading as="h2" variant="big" className="text-neutral-400 font-normal leading-[1.1] tracking-tight max-w-[640px]">

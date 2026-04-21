@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import Container from "@/components/container";
 import Heading from "@/components/heading";
 import SubHeading from "@/components/sub-heading";
+import Eyebrow from "@/components/eyebrow";
 
 const sprintFeatures = [
     "AI-Assisted Development",
@@ -17,15 +18,9 @@ export default function ExecutionHowSprintWork() {
                 {/* ── Top Area: tag + heading/subtext ── */}
                 <div className="flex flex-col gap-8 mb-16 lg:mb-20">
                     {/* Tag */}
-                    <div className="flex items-center gap-2.5 bg-muted px-2.5 py-1.5 w-fit">
-                        <span
-                            className="inline-block w-2.5 h-2.5 bg-white shrink-0"
-                            aria-hidden="true"
-                        />
-                        <p className="font-mono text-xs xl:text-sm uppercase tracking-widest text-white leading-none mt-0.5">
-                            HOW SPRINT WORK
-                        </p>
-                    </div>
+                    <Eyebrow className="mb-2">
+                        OW SPRINT WORK
+                    </Eyebrow >
 
                     {/* Two-column: heading | subtext */}
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-end">

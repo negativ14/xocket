@@ -3,6 +3,7 @@ import Container from "@/components/container";
 import Heading from "@/components/heading";
 import SubHeading from "@/components/sub-heading";
 import { Plan, PlanCard } from "../work-with-us";
+import Eyebrow from "@/components/eyebrow";
 
 // ── Data ───────────────────────────────────────────────────
 const plans: Plan[] = [
@@ -52,15 +53,9 @@ export default function AboutWorkWithUs() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-end mb-16">
                     <div className="flex flex-col gap-6">
                         {/* Tag */}
-                        <div className="flex items-center gap-2.5 bg-muted px-2.5 py-1.5 w-fit">
-                            <span
-                                className="inline-block w-2.5 h-2.5 bg-white shrink-0"
-                                aria-hidden="true"
-                            />
-                            <p className="font-mono text-xs xl:text-sm uppercase tracking-widest text-white leading-none mt-0.5">
-                                EXECUTION PATHS
-                            </p>
-                        </div>
+                        <Eyebrow className="mb-2">
+                            EXECUTION PATHS
+                        </Eyebrow>
 
                         {/* Heading */}
                         <Heading as="h2" variant="big" className="font-normal leading-[1.1] tracking-tight">

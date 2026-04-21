@@ -6,6 +6,7 @@ import { TrendingUp, Building2 } from "lucide-react";
 import { ElementType } from "react";
 import { FrameMarker } from "@/components/frame";
 import SubHeading from "@/components/sub-heading";
+import Eyebrow from "@/components/eyebrow";
 
 // ── Types ──────────────────────────────────────────────────
 interface Card {
@@ -113,15 +114,10 @@ export default function WhoWeWorkWith() {
                 {/* ── Header — centered ── */}
                 <div className="flex flex-col items-center text-center gap-6 mb-14">
                     {/* Tag */}
-                    <div className="flex items-center gap-2.5 bg-muted px-2 py-1.5 w-fit">
-                        <span
-                            className="inline-block w-3 h-3 bg-foreground shrink-0"
-                            aria-hidden="true"
-                        />
-                        <p className="font-mono text-xs xl:text-sm uppercase tracking-widest text-foreground leading-none">
-                            Who We Work For
-                        </p>
-                    </div>
+                    <Eyebrow>
+                        Who We Work For
+                    </Eyebrow>
+
 
                     {/* Heading */}
                     <Heading as="h2" variant="big" className="leading-tight">
@@ -152,6 +148,6 @@ export default function WhoWeWorkWith() {
                     </div>
                 </div>
             </Container>
-        </section>
+        </section >
     );
 }

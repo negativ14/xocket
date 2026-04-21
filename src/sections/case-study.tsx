@@ -6,6 +6,7 @@ import Heading from "@/components/heading";
 import SubHeading from "@/components/sub-heading";
 import product1 from "@/assets/images/product-1.jpg";
 import product2 from "@/assets/images/product-2.jpg";
+import Eyebrow from "@/components/eyebrow";
 
 // ── Data ───────────────────────────────────────────────────
 const caseStudies = [
@@ -21,16 +22,9 @@ export default function CaseStudy() {
                 {/* ── Header ── */}
                 <div className="flex flex-col gap-6 mb-16">
                     {/* Tag — matches comparison.tsx style */}
-                    <div className="flex items-center gap-2.5 bg-muted px-2 py-1.5 w-fit">
-                        <span
-                            className="inline-block w-3 h-3 bg-foreground shrink-0"
-                            aria-hidden="true"
-                        />
-                        <p className="font-mono text-xs xl:text-sm uppercase tracking-widest text-foreground leading-none">
-                            Case Studies
-                        </p>
-                    </div>
-
+                    <Eyebrow className="mb-2">
+                        Case Studies
+                    </Eyebrow>
                     {/* Heading — left-aligned, same variant as other sections */}
                     <Heading as="h2" variant="big" className="text-neutral-400 max-w-[640px]">
                         Built for{" "}

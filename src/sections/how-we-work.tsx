@@ -8,6 +8,7 @@ import howWeWork2 from "@/assets/images/how-we-work-2.jpg";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Heading from "@/components/heading";
 import SubHeading from "@/components/sub-heading";
+import Eyebrow from "@/components/eyebrow";
 
 // ── Types ─────────────────────────────────────────────────
 interface Step {
@@ -71,16 +72,9 @@ export default function HowWeWork() {
                     {/* ── Left: Content ── */}
                     <div className="flex flex-col py-16 lg:py-20">
                         {/* Tag */}
-                        <div className="flex items-center gap-2.5 bg-muted px-2 py-1.5 w-fit mb-10">
-                            <span
-                                className="inline-block w-3 h-3 bg-foreground shrink-0"
-                                aria-hidden="true"
-                            />
-                            <p className="font-mono text-xs xl:text-sm uppercase tracking-widest text-foreground leading-none">
-                                How We Work
-                            </p>
-                        </div>
-
+                        <Eyebrow className="mb-10">
+                            How We Work
+                        </Eyebrow>
                         {/* Heading — static */}
                         <Heading variant="big" className="text-foreground mb-6">
                             <span className="text-foreground/40">A System Built for </span>
