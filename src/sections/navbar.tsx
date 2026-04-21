@@ -54,7 +54,7 @@ export default function Navbar() {
                     {/* CTA + Hamburger */}
                     <div className="flex items-center gap-4">
                         <Link
-                            href="#book-a-call"
+                            href="/contact-us"
                             className="hidden md:inline-flex items-center justify-center bg-foreground px-2 py-2.5 font-mono uppercase text-background hover:bg-foreground hover:text-background transition-colors duration-200"
                         >
                             Book a Call

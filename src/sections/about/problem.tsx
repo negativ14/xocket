@@ -14,9 +14,9 @@ export default function AboutProblem() {
 
                     {/* header */}
                     <div className="flex flex-col gap-8">
-                        <Heading as="h2" variant="big" className="font-normal leading-[1.1] tracking-tight lg:text-5xl">
+                        <Heading as="h2" variant="big" className="font-normal leading-[1.1] tracking-tight">
                             <span className="text-neutral-400">Why Most Products </span>
-                            <span className="text-white">Fail</span>
+                            <span className="text-white italic">Fail</span>
                         </Heading>
 
                         {/* Body copy */}

@@ -24,7 +24,7 @@ export default function CaseStudyHero() {
                     <Heading as="h1" variant="big" className="leading-[1.1] font-normal tracking-tight">
                         <span className="text-neutral-400 block">From Idea to Production —</span>
                         <span className="text-neutral-400">Without </span>
-                        <span className="text-white">the Chaos</span>
+                        <span className="text-white italic">the Chaos</span>
                     </Heading>
 
                     <SubHeading variant="big" className="font-sans text-neutral-400 max-w-[600px]">

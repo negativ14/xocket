@@ -5,7 +5,7 @@ import Container from "@/components/container";
 import Heading from "@/components/heading";
 import SubHeading from "@/components/sub-heading";
 import LogoIcon from "@/assets/images/logo.svg";
-import heroImage from "@/assets/images/hero-1.jpg";
+import heroImage from "@/assets/images/buildings.png";
 
 // ── Nav Data ────────────────────────────────────────────────
 const navLinks = [
@@ -87,7 +87,7 @@ export default function Footer() {
                 <Container className="relative z-10 flex flex-col items-center text-center gap-8">
                     {/* Tag */}
                     <Link
-                        href="#contact"
+                        href="/contact-us"
                         className="inline-flex items-center gap-3 bg-muted px-3 py-2 hover:bg-white/15 transition-colors duration-200"
                     >
                         <span
@@ -119,7 +119,7 @@ export default function Footer() {
 
                     {/* CTA Button */}
                     <Link
-                        href="#strategy-call"
+                        href="contact-us"
                         className="inline-flex items-center gap-3 bg-foreground px-8 py-4 font-mono uppercase text-background transition-all duration-200 mt-2"
                     >
                         Book A Strategy Call
