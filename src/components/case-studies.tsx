@@ -31,7 +31,6 @@ export default function CaseStudies({
     subheading,
     items,
     ctaLabel = "SEE ALL",
-    ctaHref = "#case-studies",
     className,
 }: CaseStudiesProps) {
     return (

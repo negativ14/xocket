@@ -163,7 +163,7 @@ export default function Footer() {
                             Terms
                         </Link>
                         <Link
-                            href="#privacy"
+                            href="/privacy-policy"
                             className="font-mono text-foreground hover:text-foreground transition-colors duration-200"
                         >
                             Privacy Policy

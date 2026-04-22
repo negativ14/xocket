@@ -63,17 +63,17 @@ export default function MvpStructure() {
             {/* Content */}
             <Container className="relative z-10">
                 {/* ── Top Area: tag + heading/subtext ── */}
-                <div className="flex flex-col gap-10 mb-12">
+                <div className="flex flex-col gap-6 mb-12">
                     {/* Tag */}
-                    <Eyebrow className="mb-2">
+                    <Eyebrow className="">
                         Structure
                     </Eyebrow>
 
                     {/* Two-column: heading | subtext */}
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-end">
-                        <Heading as="h2" variant="big" className="text-white leading-tight font-sans lg:text-[40px] font-normal">
+                        <Heading as="h2" variant="big" className="text-white leading-tight font-heading lg:text-[60px]">
                             <span className="text-neutral-400">What&apos;s </span>
-                            <span className="">included</span>
+                            <span className="italic">included</span>
                         </Heading>
 
                         <p className="font-sans text-base xl:text-lg text-white/60 leading-relaxed text-balance">

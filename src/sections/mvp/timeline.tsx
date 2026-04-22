@@ -78,10 +78,8 @@ export default function MvpTimeline() {
 
                 {/* Timeline Grid */}
                 <div className="relative mx-auto">
-                    {/* Center line for Desktop */}
-                    <div className="hidden md:block absolute left-1/2 top-4 bottom-0 w-px bg-white/15 -translate-x-1/2" />
-                    {/* Center dots for Desktop */}
-                    <div className="hidden md:block absolute left-1/2 top-1/2 w-6 h-6 bg-white rounded-full -translate-x-1/2 -translate-y-1/2 z-10" />
+                    {/* Center vertical line — desktop only */}
+                    <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-white/15 -translate-x-1/2" />
 
                     <div className="flex flex-col gap-16 lg:gap-20">
                         {timelineData.map((item, index) => {
@@ -90,12 +88,9 @@ export default function MvpTimeline() {
                             return (
                                 <div
                                     key={item.week}
-                                    className={`relative flex w-full ${isEven ? "justify-start" : "justify-end"
-                                        }`}
+                                    className={`relative flex w-full ${isEven ? "justify-start" : "justify-end"}`}
                                 >
-                                    <div
-                                        className={`w-full md:w-[48%] flex flex-col gap-5 ${isEven ? "pr-10" : "pl-10"}`}
-                                    >
+                                    <div className={`w-full md:w-[48%] flex flex-col gap-5 ${isEven ? "pr-10" : "pl-10"}`}>
                                         <div className="flex items-center gap-3">
                                             <span className="shrink-0 w-2.5 h-2.5 bg-white" aria-hidden="true" />
                                             <h3 className="font-mono text-xl font-semibold text-white tracking-wide">
@@ -103,18 +98,52 @@ export default function MvpTimeline() {
                                             </h3>
                                         </div>
 
+                                        {/* Card + connector */}
                                         <div className="relative border border-white p-6 md:p-8 bg-transparent w-full">
                                             <CornerBrackets />
                                             <ul className="flex flex-col gap-4">
                                                 {item.items.map((listItem) => (
-                                                    <li key={listItem} className="flex items-center gap-3">
+                                                    <li key={listItem} className="flex items-center gap-4">
                                                         <CheckCircle2 className="w-[18px] h-[18px] text-white shrink-0 font-light" strokeWidth={1.2} />
-                                                        <span className="font-sans text-[15px] text-white/70">
+                                                        <span className="font-sans text-lg text-white">
                                                             {listItem}
                                                         </span>
                                                     </li>
                                                 ))}
                                             </ul>
+
+                                            {/* Dashed horizontal connector to center line — desktop only */}
+                                            {isEven ? (
+                                                /* Left card → connector goes RIGHT from card edge to center dot */
+                                                <>
+                                                    {/* Dashed line */}
+                                                    <div
+                                                        className="hidden md:block absolute top-1/2 -right-15 w-15 -translate-y-1/2"
+                                                        style={{
+                                                            borderTop: "1px dashed rgba(255,255,255,0.4)",
+                                                        }}
+                                                    />
+                                                    {/* Dot on the center line */}
+                                                    <div className="hidden md:block absolute top-1/2 -right-15 w-[18px] h-[18px] rounded-full bg-white border-2 border-white -translate-y-1/2 translate-x-full z-10">
+                                                        <div className="w-full h-full rounded-full bg-neutral-400" />
+                                                    </div>
+                                                </>
+                                            ) : (
+                                                /* Right card → connector goes LEFT from card edge to center dot */
+                                                <>
+                                                    {/* Dashed line */}
+                                                    <div
+                                                        className="hidden md:block absolute top-1/2 -left-15 w-15 -translate-y-1/2"
+                                                        style={{
+                                                            borderTop: "1px dashed rgba(255,255,255,0.4)",
+                                                        }}
+                                                    />
+                                                    {/* Dot on the center line */}
+                                                    <div className="hidden md:block absolute top-1/2 -left-15 w-[18px] h-[18px] rounded-full bg-white border-2 border-white -translate-y-1/2 -translate-x-full z-10" >
+                                                        <div className="w-full h-full rounded-full bg-neutral-400" />
+                                                    </div>
+                                                </>
+                                            )}
                                         </div>
                                     </div>
                                 </div>
