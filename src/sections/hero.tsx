@@ -15,7 +15,7 @@ export default function Hero() {
                     {/* ── Left Column ────────────────────────────── */}
                     <div className="flex flex-col justify-center gap-4 lg:pr-16">
                         {/* Tag badge */}
-                        <Eyebrow className="mb-2">
+                        <Eyebrow className="mb-2 ">
                             From Idea → MVP or Execution Sprints for Scaling Startups.
                         </Eyebrow>
 
@@ -24,7 +24,7 @@ export default function Hero() {
                             <span className="text-neutral-400 not-italic">Structured Execution{" "}</span>
                             <span>for</span>
                             <br />
-                            Growing Startups
+                            <span className="text-white">Growing Startups</span>
                         </Heading>
 
                         {/* Subheading */}

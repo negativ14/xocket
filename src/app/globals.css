@@ -46,8 +46,6 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
-
-
 }
 
 :root {
@@ -129,4 +127,183 @@
   html {
     @apply font-sans;
   }
+}
+
+.chroma-text-out.text-white,
+[class*="text-white"] .chroma-text-out {
+  background-image:
+    linear-gradient(
+      90deg,
+      #0000 0% 33.33%,
+      #c679c4 40%,
+      #fa3d1d 45%,
+      #ffb005 50%,
+      #e1e1fe 55%,
+      #0358f7 60%,
+      #fff 66.67% 100%
+    ),
+    linear-gradient(
+      270deg,
+      #0000 0% 33.33%,
+      #c679c4 40%,
+      #fa3d1d 45%,
+      #ffb005 50%,
+      #e1e1fe 55%,
+      #0358f7 60%,
+      #fff 66.67% 100%
+    );
+}
+
+.chroma-text-out {
+  background-blend-mode: normal;
+  will-change: background-position;
+  background-image:
+    linear-gradient(
+      90deg,
+      #0000 0% 33.33%,
+      #c679c4 40%,
+      #fa3d1d 45%,
+      #ffb005 50%,
+      #e1e1fe 55%,
+      #0358f7 60%,
+      #a3a3a3 66.67% 100%
+    ),
+    linear-gradient(
+      270deg,
+      #0000 0% 33.33%,
+      #c679c4 40%,
+      #fa3d1d 45%,
+      #ffb005 50%,
+      #e1e1fe 55%,
+      #0358f7 60%,
+      #a3a3a3 66.67% 100%
+    );
+  background-position:
+    100% 0,
+    100% 0;
+  background-size:
+    300% 100%,
+    300% 100%;
+}
+
+.chroma-text-out,
+.chroma-text-out-animate {
+  -webkit-text-fill-color: transparent;
+  z-index: 1;
+  -webkit-background-clip: text;
+  background-clip: text;
+  display: inline;
+  position: relative;
+}
+
+/* Always animate when chroma-text-out-animate class is present */
+.chroma-text-out-animate {
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-name: chroma-move;
+}
+
+/* Also trigger on group hover (legacy support) */
+.group:hover .chroma-text-out-animate {
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-name: chroma-move;
+}
+
+@keyframes chroma-move {
+  0% {
+    background-position:
+      100% 0,
+      100% 0;
+  }
+
+  /* Animation completes at 33% (0.5s of 1.5s) */
+  33% {
+    background-position:
+      0 0,
+      0 0;
+  }
+
+  /* Hold the final state until the end (pause) */
+  100% {
+    background-position:
+      0 0,
+      0 0;
+  }
+}
+
+.chroma-card-title {
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  display: inline;
+  position: relative;
+  font: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  background-blend-mode: normal;
+  will-change: background-position;
+  animation-fill-mode: both;
+  background-image:
+    linear-gradient(
+      90deg,
+      #0000 0% 33.33%,
+      #c679c4 40%,
+      #fa3d1d 45%,
+      #ffb005 50%,
+      #e1e1fe 55%,
+      #0358f7 60%,
+      #000 66.67% 100%
+    ),
+    linear-gradient(
+      270deg,
+      #0000 0% 33.33%,
+      #c679c4 40%,
+      #fa3d1d 45%,
+      #ffb005 50%,
+      #e1e1fe 55%,
+      #0358f7 60%,
+      #000 66.67% 100%
+    );
+  background-size:
+    300% 100%,
+    300% 100%;
+  background-position:
+    0% 0,
+    0% 0;
+  animation: chroma-continuous-loop 3.5s linear infinite;
+}
+@keyframes chroma-continuous-loop {
+  0% {
+    background-position:
+      0% 0,
+      0% 0;
+  }
+
+  100% {
+    background-position:
+      -300% 0,
+      -300% 0;
+  }
+}
+
+/* Sequential animation delays for flowing chroma effect */
+.chroma-delay-0 {
+  animation-delay: 0s;
+}
+
+.chroma-delay-1 {
+  animation-delay: calc(-4s / 3);
+}
+
+.chroma-delay-2 {
+  animation-delay: calc(-8s / 3);
+}
+
+.chroma-delay-3 {
+  animation-delay: calc(-12s / 3);
 }
