@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import LogoIcon from "@/assets/images/logo.svg";
+import LogoPng from "@/assets/images/logo-image.png";
+import LogoSvg from "@/assets/images/logo.svg";
 import Container from "@/components/container";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
@@ -16,15 +17,37 @@ const navLinks = [
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+    const [svgLoaded, setSvgLoaded] = useState(false);
     const pathname = usePathname();
 
     return (
         <header className="sticky top-0 z-50 w-full bg-background border-b border-border/40">
             <Container>
                 <nav className="flex items-center justify-between py-7" aria-label="Main navigation">
-                    {/* Logo */}
-                    <Link href="/" aria-label="Xocket home" className="shrink-0">
-                        <Image src={LogoIcon} alt="logo" className="h-[40px] w-auto" />
+                    {/* Logo — PNG loads instantly (priority), SVG crossfades in once ready */}
+                    <Link href="/" aria-label="Xocket home" className="relative shrink-0 block h-10">
+                        {/* Low-res PNG: visible immediately, fades out when SVG is ready */}
+                        <Image
+                            src={LogoPng}
+                            alt="Xocket logo"
+                            height={80}
+                            width={180}
+                            priority
+                            className={`h-10 w-auto transition-opacity duration-400 ${
+                                svgLoaded ? "opacity-0" : "opacity-100"
+                            }`}
+                        />
+                        {/* High-res SVG: loads silently, crossfades in on top */}
+                        <Image
+                            src={LogoSvg}
+                            alt="Xocket logo"
+                            height={80}
+                            width={180}
+                            onLoad={() => setSvgLoaded(true)}
+                            className={`absolute inset-0 h-10 w-auto transition-opacity duration-400 ${
+                                svgLoaded ? "opacity-100" : "opacity-0"
+                            }`}
+                        />
                     </Link>
 
                     {/* Center Nav Links — hidden on mobile */}
