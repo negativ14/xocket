@@ -13,9 +13,9 @@ export default function ExecutionCaseStudies() {
             eyebrow="Case Studies"
             heading={
                 <>
-                    Built for <span className="text-white">Real Products,</span> Not
+                    Built for <span className="text-white italic">Real Products,</span> Not
                     <br />
-                    <span className="text-white">Just Ideas</span>
+                    <span className="text-white italic">Just Ideas</span>
                 </>
             }
             subheading="A look at how we've helped teams design, build, and scale production-ready products."

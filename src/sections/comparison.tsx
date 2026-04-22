@@ -86,7 +86,7 @@ function ComparisonItem({
 }) {
     return (
         <div
-            className={`flex items-center gap-4 py-4 last:border-b-0 ${muted ? "text-foreground/60" : "text-foreground"}`}
+            className={`flex items-center gap-4 py-4 last:border-b-0 px-6 ${muted ? "text-foreground/60" : "text-foreground"}`}
         >
             <Icon className="w-5 h-5 shrink-0" strokeWidth={1.5} />
             <span className="font-sans text-xl leading-snug">{text}</span>
@@ -145,21 +145,24 @@ export default function Comparison() {
                         </p>
 
                         {/* Box with corner brackets */}
-                        <div className="relative border border-foreground/15 px-6 py-2">
+                        <div className="relative border border-foreground/15">
                             {/* Corner L-brackets */}
                             <span className="absolute top-0 left-0 w-3 h-3 border-t border-l border-foreground/30" />
                             <span className="absolute top-0 right-0 w-3 h-3 border-t border-r border-foreground/30" />
                             <span className="absolute bottom-0 left-0 w-3 h-3 border-b border-l border-foreground/30" />
                             <span className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-foreground/30" />
 
-                            {rows.map((row) => (
-                                <ComparisonItem
-                                    key={row.typicalText}
-                                    icon={row.typicalIcon}
-                                    text={row.typicalText}
-                                    muted
-                                />
-                            ))}
+                            {/* Inner wrapper isolates divide-y from the absolute corner spans */}
+                            <div className="divide-y">
+                                {rows.map((row) => (
+                                    <ComparisonItem
+                                        key={row.typicalText}
+                                        icon={row.typicalIcon}
+                                        text={row.typicalText}
+                                        muted
+                                    />
+                                ))}
+                            </div>
                         </div>
                     </div>
 
@@ -173,19 +176,22 @@ export default function Comparison() {
                         </div>
 
                         {/* Box with FrameMarker Plus corners + full border */}
-                        <div className="relative border border-foreground bg-[#0E0E0E] px-6 py-2 group overflow-hidden">
-                            <span className="absolute top-0 left-0 w-3 h-3 border-t border-l border-foreground" />
-                            <span className="absolute top-0 right-0 w-3 h-3 border-t border-r border-foreground" />
-                            <span className="absolute bottom-0 left-0 w-3 h-3 border-b border-l border-foreground" />
-                            <span className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-foreground" />
+                        <div className="relative border border-foreground bg-[#0E0E0E] group overflow-hidden">
+                            <span className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-foreground" />
+                            <span className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-foreground" />
+                            <span className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-foreground" />
+                            <span className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-foreground" />
 
-                            {rows.map((row) => (
-                                <ComparisonItem
-                                    key={row.ourText}
-                                    icon={row.ourIcon}
-                                    text={row.ourText}
-                                />
-                            ))}
+                            {/* Inner wrapper isolates divide-y from the absolute corner spans */}
+                            <div className="divide-y divide-foreground/20">
+                                {rows.map((row) => (
+                                    <ComparisonItem
+                                        key={row.ourText}
+                                        icon={row.ourIcon}
+                                        text={row.ourText}
+                                    />
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>

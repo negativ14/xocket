@@ -57,16 +57,16 @@ export default function Solution() {
             {/* Content */}
             <Container className="relative z-10">
                 {/* ── Top Area: tag + heading/subtext ── */}
-                <div className="flex flex-col gap-10 mb-12">
+                <div className="flex flex-col gap-6 mb-12">
                     {/* Tag */}
-                    <Eyebrow>
+                    <Eyebrow className="mb-0">
                         Our Solution
                     </Eyebrow>
 
 
                     {/* Two-column: heading | subtext */}
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-end">
-                        <Heading as="h2" variant="big" className="text-white leading-tight font-sans lg:text-[40px] font-normal italic">
+                        <Heading as="h2" variant="big" className="text-white leading-tight font-heading lg:text-[40px] font-normal italic">
                             <span className="text-neutral-400 not-italic"> A System Built for{" "}</span>
                             <br />
                             Structured Execution

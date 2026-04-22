@@ -51,7 +51,7 @@ export default function ExecutionWhatYouGet() {
                     {/* Heading */}
                     <Heading as="h2" variant="big" className="font-normal leading-tight tracking-tight">
                         <span className="text-neutral-400">Monthly Engagement </span>
-                        <span className="text-white">Model</span>
+                        <span className="text-white italic">Model</span>
                     </Heading>
 
                     {/* Subtext */}

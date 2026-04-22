@@ -107,7 +107,7 @@ export default function WhoWeWorkWith({
                     <CornerBrackets />
                     <TickMarks count={cards.length - 1} />
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 -space-x-0.5">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 ">
                         {cards.map((card, i) => (
                             <WorkCardItem
                                 key={card.title}

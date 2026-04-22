@@ -67,7 +67,7 @@ export default function MvpTimeline() {
                         </Eyebrow>
                         <Heading as="h2" variant="big" className="font-normal leading-none tracking-tight">
                             <span className="text-neutral-400 block mb-1.5">MVP Project</span>
-                            <span className="text-white block">Timeline</span>
+                            <span className="text-white block italic">Timeline</span>
                         </Heading>
                     </div>
 

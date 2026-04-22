@@ -18,7 +18,7 @@ export default function FeatureCard({ title, body, icon: Icon, className }: Feat
         <div
             className={cn(
                 "flex flex-col bg-white p-6",
-                haIcon ? "justify-between min-h-[430px]" : "gap-2 min-h-[160px]",
+                haIcon ? "justify-between min-h-[240px]" : "gap-2 min-h-[160px]",
                 className
             )}
         >
@@ -30,7 +30,7 @@ export default function FeatureCard({ title, body, icon: Icon, className }: Feat
             )}
 
             {/* Text — pinned to bottom when icon present, otherwise flows naturally */}
-            <div className={cn("flex flex-col gap-2", haIcon && "mt-auto pt-12")}>
+            <div className={cn("flex flex-col gap-2", haIcon && "mt-auto")}>
                 <h3 className="font-mono text-xl font-semibold text-background tracking-tighter leading-snug">
                     {title}
                 </h3>

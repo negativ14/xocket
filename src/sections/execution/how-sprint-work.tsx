@@ -19,14 +19,14 @@ export default function ExecutionHowSprintWork() {
                 <div className="flex flex-col gap-8 mb-16 lg:mb-20">
                     {/* Tag */}
                     <Eyebrow className="mb-2">
-                        OW SPRINT WORK
+                        ON SPRINT WORK
                     </Eyebrow >
 
                     {/* Two-column: heading | subtext */}
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-end">
                         <Heading as="h2" variant="big" className="font-normal tracking-tight max-w-[600px]">
                             <span className="text-neutral-400 block">We use AI + structured sprints</span>
-                            <span className="text-white">to move 2–3x faster</span>
+                            <span className="text-white italic">to move 2–3x faster</span>
                         </Heading>
 
                         <SubHeading variant="big" className="font-sans text-neutral-400 max-w-[600px]">

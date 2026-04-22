@@ -80,7 +80,7 @@ export default function CaseStudies({
                 {/* CTA */}
                 <div className="flex justify-center mt-2">
                     <Link
-                        href={ctaHref}
+                        href={"/case-study"}
                         className="inline-flex items-center gap-3 bg-[#131313] px-7 py-3.5 md:px-8 md:py-4 font-mono tracking-wider uppercase text-white hover:bg-white hover:text-black transition-colors duration-300"
                     >
                         {ctaLabel}

@@ -5,6 +5,7 @@ import Comparison from "@/sections/comparison";
 import Footer from "@/sections/footer";
 import Hero from "@/sections/hero";
 import HowWeWork from "@/sections/how-we-work";
+import TechStackSection from "@/sections/tech-stack";
 import TechnologyStack from "@/sections/technology-stack";
 import WhoWeWorkWith from "@/sections/who-we-work-with";
 import WorkWithUs from "@/sections/work-with-us";
@@ -18,7 +19,8 @@ export default function Home() {
     <WhoWeWorkWith />
     <Comparison />
     <WorkWithUs />
-    <TechnologyStack />
+    {/* <TechnologyStack /> */}
+    <TechStackSection />
     <CaseStudy />
     <Footer />
   </main>
