@@ -14,6 +14,7 @@ import Heading from "@/components/heading";
 import LogoIcon from "@/assets/images/logo-icon.svg";
 import Image from "next/image";
 import Eyebrow from "@/components/eyebrow";
+import { AnimatedList, AnimatedListItem } from "@/components/animated-list";
 
 
 // ── Types ──────────────────────────────────────────────────
@@ -153,16 +154,17 @@ export default function Comparison() {
                             <span className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-foreground/30" />
 
                             {/* Inner wrapper isolates divide-y from the absolute corner spans */}
-                            <div className="divide-y">
+                            <AnimatedList className="divide-y">
                                 {rows.map((row) => (
-                                    <ComparisonItem
-                                        key={row.typicalText}
-                                        icon={row.typicalIcon}
-                                        text={row.typicalText}
-                                        muted
-                                    />
+                                    <AnimatedListItem key={row.typicalText}>
+                                        <ComparisonItem
+                                            icon={row.typicalIcon}
+                                            text={row.typicalText}
+                                            muted
+                                        />
+                                    </AnimatedListItem>
                                 ))}
-                            </div>
+                            </AnimatedList>
                         </div>
                     </div>
 
@@ -183,15 +185,16 @@ export default function Comparison() {
                             <span className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-foreground" />
 
                             {/* Inner wrapper isolates divide-y from the absolute corner spans */}
-                            <div className="divide-y divide-foreground/20">
+                            <AnimatedList className="divide-y divide-foreground/20">
                                 {rows.map((row) => (
-                                    <ComparisonItem
-                                        key={row.ourText}
-                                        icon={row.ourIcon}
-                                        text={row.ourText}
-                                    />
+                                    <AnimatedListItem key={row.ourText}>
+                                        <ComparisonItem
+                                            icon={row.ourIcon}
+                                            text={row.ourText}
+                                        />
+                                    </AnimatedListItem>
                                 ))}
-                            </div>
+                            </AnimatedList>
                         </div>
                     </div>
                 </div>

@@ -5,7 +5,7 @@ import SubHeading from "@/components/sub-heading";
 import Eyebrow from "@/components/eyebrow";
 import { FrameMarker } from "@/components/frame";
 import { cn } from "@/lib/utils";
-
+import { WorkCardText } from "./work-card-text";
 // ── Types ──────────────────────────────────────────────────
 export interface WorkCard {
     icon: ElementType;
@@ -32,12 +32,7 @@ function WorkCardItem({ icon: Icon, title, body, isLast }: WorkCard & { isLast: 
         >
             <Icon className="w-10 h-10 text-foreground" strokeWidth={1.5} />
             <FrameMarker className="size-6 stroke-2" />
-            <div className="flex flex-col gap-2.5 mt-6">
-                <h3 className="font-sans text-xl font-semibold text-foreground leading-snug">
-                    {title}
-                </h3>
-                <p className="font-sans text-foreground/50 leading-relaxed">{body}</p>
-            </div>
+            <WorkCardText title={title} body={body} />
         </div>
     );
 }

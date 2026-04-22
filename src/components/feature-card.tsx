@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import { ElementType } from "react";
-
+import { FeatureCardText } from "./feature-card-text";
 interface FeatureCardProps {
     title: string;
     body: string;
@@ -30,14 +30,7 @@ export default function FeatureCard({ title, body, icon: Icon, className }: Feat
             )}
 
             {/* Text — pinned to bottom when icon present, otherwise flows naturally */}
-            <div className={cn("flex flex-col gap-2", haIcon && "mt-auto")}>
-                <h3 className="font-mono text-xl font-semibold text-background tracking-tighter leading-snug">
-                    {title}
-                </h3>
-                <p className="font-sans text-base text-background/60 leading-relaxed">
-                    {body}
-                </p>
-            </div>
+            <FeatureCardText title={title} body={body} haIcon={haIcon} />
         </div>
     );
 }

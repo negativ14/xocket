@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CircleCheck, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Container from "@/components/container";
 import Heading from "@/components/heading";
 import SubHeading from "@/components/sub-heading";
 import Eyebrow from "@/components/eyebrow";
 import heroImage from "@/assets/images/buildings.png";
 import { cn } from "@/lib/utils";
+import { AnimatedPlanCardContent } from "./animated-plan-card-content";
 
 // ── Types ──────────────────────────────────────────────────
 export interface Plan {
@@ -37,24 +38,12 @@ export function PlanCard({ plan }: { plan: Plan }) {
     if (featured) {
         return (
             <div className="relative flex flex-col justify-between bg-white p-7">
-                <div className="flex flex-col gap-6">
-                    <div>
-                        <h3 className="font-sans text-xl font-semibold text-background leading-snug mb-2">
-                            {title}
-                        </h3>
-                        <p className="font-sans font-medium text-background/70 leading-relaxed">
-                            {subtitle}
-                        </p>
-                    </div>
-                    <ul className="flex flex-col gap-6 mt-8">
-                        {features.map((f) => (
-                            <li key={f} className="flex items-center gap-4 text-background">
-                                <CircleCheck className="w-4 h-4 shrink-0" strokeWidth={1.5} />
-                                <span className="font-sans">{f}</span>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+                <AnimatedPlanCardContent 
+                    title={title} 
+                    subtitle={subtitle} 
+                    features={features} 
+                    featured={true} 
+                />
                 <Link
                     href={href}
                     className="mt-12 flex items-center justify-between w-full bg-background text-foreground px-5 py-3 font-mono tracking-[0.12em] uppercase hover:opacity-90 transition-opacity duration-200"
@@ -72,22 +61,12 @@ export function PlanCard({ plan }: { plan: Plan }) {
             <span className="absolute top-0 right-0 w-4 h-4 border-t border-r border-foreground/40" />
             <span className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-foreground/40" />
             <span className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-foreground/40" />
-            <div className="flex flex-col gap-6">
-                <div>
-                    <h3 className="font-sans text-xl font-semibold text-foreground leading-snug mb-2">
-                        {title}
-                    </h3>
-                    <p className="font-sans text-foreground/50 leading-relaxed">{subtitle}</p>
-                </div>
-                <ul className="flex flex-col gap-6 mt-8">
-                    {features.map((f) => (
-                        <li key={f} className="flex items-center gap-4 text-foreground/70">
-                            <CircleCheck className="w-4 h-4 shrink-0 text-foreground/40" strokeWidth={1.5} />
-                            <span className="font-sans">{f}</span>
-                        </li>
-                    ))}
-                </ul>
-            </div>
+            <AnimatedPlanCardContent 
+                title={title} 
+                subtitle={subtitle} 
+                features={features} 
+                featured={false} 
+            />
             <Link
                 href={href}
                 className="mt-12 flex items-center justify-between w-full bg-foreground text-background px-5 py-3 font-mono tracking-[0.12em] uppercase hover:bg-foreground/90 transition-all duration-200"

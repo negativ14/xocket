@@ -3,7 +3,7 @@ import Eyebrow from "@/components/eyebrow";
 import Heading from "@/components/heading";
 import { CheckCircle2 } from "lucide-react";
 import React from "react";
-
+import { AnimatedList, AnimatedListItem } from "@/components/animated-list";
 const timelineData = [
     {
         week: "Week 1",
@@ -101,16 +101,16 @@ export default function MvpTimeline() {
                                         {/* Card + connector */}
                                         <div className="relative border border-white p-6 md:p-8 bg-transparent w-full">
                                             <CornerBrackets />
-                                            <ul className="flex flex-col gap-4">
+                                            <AnimatedList className="flex flex-col gap-4">
                                                 {item.items.map((listItem) => (
-                                                    <li key={listItem} className="flex items-center gap-4">
+                                                    <AnimatedListItem key={listItem} className="flex items-center gap-4">
                                                         <CheckCircle2 className="w-[18px] h-[18px] text-white shrink-0 font-light" strokeWidth={1.2} />
                                                         <span className="font-sans text-lg text-white">
                                                             {listItem}
                                                         </span>
-                                                    </li>
+                                                    </AnimatedListItem>
                                                 ))}
-                                            </ul>
+                                            </AnimatedList>
 
                                             {/* Dashed horizontal connector to center line — desktop only */}
                                             {isEven ? (
