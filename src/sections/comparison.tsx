@@ -123,7 +123,7 @@ export default function Comparison() {
                             <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-foreground/10">
                                 <X className="w-3 h-3 text-foreground/40" strokeWidth={2.5} />
                             </span>
-                            <span className="font-mono text-foreground/80 tracking-wider uppercase">
+                            <span className="font-mono text-lg text-foreground/80 tracking-wider uppercase">
                                 Typical Approach
                             </span>
                         </div>
@@ -136,7 +136,7 @@ export default function Comparison() {
                                 className="w-5 h-5"
                                 style={{ width: "auto", height: "20px" }}
                             />
-                            <span className="font-mono text-foreground tracking-wider uppercase">
+                            <span className="font-mono text-lg text-foreground tracking-wider uppercase">
                                 Our Approach
                             </span>
                         </div>
@@ -165,7 +165,6 @@ export default function Comparison() {
                         <AnimatedList className="flex flex-col divide-y divide-foreground/8">
                         {rows.map((row, i) => {
                             const TypicalIcon = row.typicalIcon;
-                            const OurIcon = row.ourIcon;
                             return (
                                 <AnimatedListItem key={i}>
                                     <div className="grid grid-cols-2 group">
