@@ -22,7 +22,7 @@ export default function AboutHero() {
                     <div className="flex flex-col xl:flex-row items-start xl:items-end w-full justify-between gap-12 xl:gap-20">
                         {/* Subheading */}
                         <SubHeading variant="big" className="font-sans text-neutral-400 max-w-[620px] text-left">
-                            Xocket helps with founders and teams to design, build, and scale production-ready products — with the systems, structure, and engineering discipline most teams lack.
+                            Xocket helps with founders and teams to design, build, and scale production-ready products, with the systems, structure, and engineering discipline most teams lack.
                         </SubHeading>
 
                         {/* CTA Buttons */}

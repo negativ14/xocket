@@ -21,14 +21,14 @@ export default function MvpHero() {
 
                         {/* Heading */}
                         <Heading variant="big" as="h1" className="text-neutral-400 leading-tight">
-                            Launch an Investor-Ready{" "}
+                            Launch an Investor & Ready{" "}
                             <span className="">MVP</span>{" "}
                             <span className="italic text-foreground">in 6–8 Weeks</span>
                         </Heading>
 
                         {/* Subheading */}
                         <SubHeading variant="big" className="font-sans text-foreground/60 max-w-[600px]">
-                            We design, build, and launch investor-ready products — engineered for scale,
+                            We design, build, and launch investor-ready products, engineered for scale,
                             speed, and real-world use from day one.
                         </SubHeading>
 

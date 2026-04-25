@@ -40,7 +40,7 @@ export default function AboutProblem() {
 
                         {/* Lead */}
                         <p className="font-sans text-lg text-foreground/60 leading-relaxed lg:pt-2 max-w-[480px]">
-                            Most products don&apos;t fail because of bad ideas &mdash; they fail
+                            Most products don&apos;t fail because of bad ideas, they fail
                             because execution is fragmented.
                         </p>
                     </div>
