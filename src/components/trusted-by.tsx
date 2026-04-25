@@ -1,19 +1,20 @@
 "use client";
 
+import Image from "next/image";
 import { motion, Variants } from "motion/react";
 import Container from "./container";
 import Heading from "./heading";
 
 // ── Data — swap name/logo when assets are ready ────────────
 const companies = [
-    { name: "Google" },
-    { name: "Hippocratic AI" },
-    { name: "Primer" },
-    { name: "Stripe" },
-    { name: "Meta" },
-    { name: "Attention" },
-    { name: "Replicate" },
-    { name: "Microsoft" },
+    { name: "Google", logo: "/icons/google.webp" },
+    { name: "Hippocratic AI", logo: "/icons/hippocratic.webp" },
+    { name: "Primer", logo: "/icons/primer.png" },
+    { name: "Stripe", logo: "/icons/stripe.png" },
+    { name: "Meta", logo: "/icons/meta.png" },
+    { name: "Attention", logo: "/icons/attention.webp" },
+    { name: "Replicate", logo: "/icons/replicate.png" },
+    { name: "Microsoft", logo: "/icons/microsoft.png" },
 ];
 
 // ── Animation variants ─────────────────────────────────────
@@ -56,7 +57,17 @@ export default function TrustedBy() {
                         >
                             {/* Logo slot — replace div with <Image> when assets are ready */}
                             <div className="flex flex-col lg:flex-row items-center gap-2.5">
-                                <div className="w-4 h-4 rounded-full bg-foreground/20 shrink-0 group-hover:bg-foreground/50 transition-colors duration-300" />
+                                {company.logo ? (
+                                    <Image
+                                        src={company.logo}
+                                        alt={`${company.name} logo`}
+                                        width={24}
+                                        height={24}
+                                        className="h-6 w-6 object-contain shrink-0 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                                    />
+                                ) : (
+                                    <div className="w-6 h-6 rounded-full bg-foreground/20 shrink-0 group-hover:bg-foreground/50 transition-colors duration-300" />
+                                )}
                                 <span className="font-mono tracking-wide text-foreground/80 group-hover:text-foreground transition-colors duration-300 whitespace-nowrap">
                                     {company.name}
                                 </span>

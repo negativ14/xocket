@@ -22,7 +22,7 @@ export default function Navbar() {
 
     return (
         <header className="sticky top-0 z-50 w-full bg-background border-b border-border/40">
-            <Container>
+            <Container className="relative z-50 bg-background">
                 <nav className="flex items-center justify-between py-7" aria-label="Main navigation">
                     {/* Logo — PNG loads instantly (priority), SVG crossfades in once ready */}
                     <Link href="/" aria-label="Xocket home" className="relative shrink-0 block h-10">
@@ -51,7 +51,7 @@ export default function Navbar() {
                     </Link>
 
                     {/* Center Nav Links — hidden on mobile */}
-                    <ul className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
+                    <ul className="hidden md:flex items-center gap-4 lg:gap-8 absolute left-1/2 -translate-x-1/2">
                         {navLinks.map((link) => {
                             const isActive = link.href.startsWith("/")
                                 ? pathname === link.href
@@ -78,7 +78,7 @@ export default function Navbar() {
                     <div className="flex items-center gap-4">
                         <Link
                             href="/contact-us"
-                            className="hidden md:inline-flex items-center justify-center bg-foreground px-2 py-2.5 font-mono uppercase text-background hover:bg-foreground hover:text-background transition-colors duration-200"
+                            className="hidden md:inline-flex items-center justify-center bg-foreground text-sm lg:text-base px-4 py-2.5 font-mono uppercase text-background hover:opacity-90 transition-opacity duration-200"
                         >
                             Book a Call
                         </Link>
@@ -92,43 +92,55 @@ export default function Navbar() {
                         >
                             <span className={`block h-px w-6 bg-foreground transition-transform duration-200 ${isOpen ? "translate-y-2.5 rotate-45" : ""}`} />
                             <span className={`block h-px w-6 bg-foreground transition-opacity duration-200 ${isOpen ? "opacity-0" : ""}`} />
-                            <span className={`block h-px w-6 bg-foreground transition-transform duration-200 ${isOpen ? "-translate-y-2.5 -rotate-45" : ""}`} />
+                            <span className={`block h-px w-6 bg-foreground transition-transform duration-200 ${isOpen ? "-translate-y-1 -rotate-45" : ""}`} />
                         </button>
                     </div>
                 </nav>
-
-                {/* Mobile menu */}
-                {isOpen && (
-                    <div className="md:hidden border-t border-border/40 py-6 flex flex-col gap-4">
-                        {navLinks.map((link) => {
-                            const isActive = link.href.startsWith("/")
-                                ? pathname === link.href
-                                : false;
-                            return (
-                                <Link
-                                    key={link.href}
-                                    href={link.href}
-                                    onClick={() => setIsOpen(false)}
-                                    className={[
-                                        "font-mono text-sm tracking-wide transition-colors duration-200 uppercase",
-                                        isActive
-                                            ? "text-foreground"
-                                            : "text-foreground/80 hover:text-foreground",
-                                    ].join(" ")}
-                                >
-                                    {link.label}
-                                </Link>
-                            );
-                        })}
-                        <Link
-                            href="#book-a-call"
-                            className="mt-2 inline-flex items-center justify-center border border-foreground px-5 py-3 font-mono text-xs tracking-widest uppercase text-foreground hover:bg-foreground hover:text-background transition-colors duration-200 self-start"
-                        >
-                            Book a Call
-                        </Link>
-                    </div>
-                )}
             </Container>
+
+            {/* Mobile menu overlay */}
+            <div
+                className={`md:hidden fixed inset-0 z-40 bg-background flex flex-col justify-between transition-transform duration-300 ease-in-out pt-32 pb-8 ${
+                    isOpen ? "translate-x-0" : "-translate-x-full"
+                }`}
+            >
+                <div className="flex flex-col gap-6 md:gap-12 px-6">
+                    {navLinks.map((link) => {
+                        const isActive = link.href.startsWith("/")
+                            ? pathname === link.href
+                            : false;
+                        return (
+                            <Link
+                                key={link.href}
+                                href={link.href}
+                                onClick={() => setIsOpen(false)}
+                                className={[
+                                    "font-mono tracking-widest transition-colors duration-200 uppercase",
+                                    isActive
+                                        ? "text-foreground"
+                                        : "text-foreground/60 hover:text-foreground",
+                                ].join(" ")}
+                            >
+                                {link.label}
+                            </Link>
+                        );
+                    })}
+                    <Link
+                        href="/contact-us"
+                        onClick={() => setIsOpen(false)}
+                        className="mt-4 inline-flex items-center justify-center bg-foreground px-6 py-3 font-mono text-sm tracking-widest uppercase text-background hover:opacity-90 transition-opacity duration-200"
+                    >
+                        Book a Call
+                    </Link>
+                </div>
+
+                {/* Slogan at bottom middle */}
+                <div className="text-center px-6 mt-auto">
+                    <p className="font-mono text-[11px] text-muted-foreground uppercase tracking-[0.2em] leading-relaxed">
+                        From idea to production<br />without the friction
+                    </p>
+                </div>
+            </div>
         </header>
     );
 }
