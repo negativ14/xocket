@@ -37,7 +37,7 @@ export default function TrustedBy() {
                 </Heading>
 
                 {/* Grid — 4×2 with bordered cells */}
-                <div className="grid grid-cols-2 sm:grid-cols-4 border-b border-x border-foreground/10">
+                <div className="grid grid-cols-2 md:grid-cols-4 border-b border-x border-foreground/10">
                     {companies.map((company, i) => (
                         <motion.div
                             key={company.name}
@@ -50,12 +50,12 @@ export default function TrustedBy() {
                                 "group flex flex-col items-center justify-center gap-3 px-6 py-10 h-[120px]",
                                 "border-t border-r border-foreground/10",
                                 /* Remove right border on last in each row */
-                                (i + 1) % 4 === 0 ? "sm:border-r-0" : "",
-                                (i + 1) % 2 === 0 ? "border-r-0 sm:border-r border-foreground/10" : "",
+                                (i + 1) % 4 === 0 ? "md:border-r-0" : "",
+                                (i + 1) % 2 === 0 ? "border-r-0 md:border-r border-foreground/10" : "",
                             ].join(" ")}
                         >
                             {/* Logo slot — replace div with <Image> when assets are ready */}
-                            <div className="flex items-center gap-2.5">
+                            <div className="flex flex-col lg:flex-row items-center gap-2.5">
                                 <div className="w-4 h-4 rounded-full bg-foreground/20 shrink-0 group-hover:bg-foreground/50 transition-colors duration-300" />
                                 <span className="font-mono tracking-wide text-foreground/80 group-hover:text-foreground transition-colors duration-300 whitespace-nowrap">
                                     {company.name}

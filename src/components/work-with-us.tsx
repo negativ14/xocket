@@ -8,7 +8,6 @@ import Eyebrow from "@/components/eyebrow";
 import heroImage from "@/assets/images/buildings.png";
 import { cn } from "@/lib/utils";
 import { AnimatedPlanCardContent } from "./animated-plan-card-content";
-import { BlueprintCorners } from "./blue-print-corners";
 
 // ── Types ──────────────────────────────────────────────────
 export interface Plan {
