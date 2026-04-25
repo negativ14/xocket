@@ -25,10 +25,10 @@ export default function AboutProblem() {
         <section className="py-20 lg:py-28 w-full overflow-hidden">
             <Container>
                 {/* ── Header ── */}
-                <div className="flex flex-col gap-10 mb-16">
+                <div className="flex flex-col gap-6 md:gap-12 mb-12">
                     <Eyebrow className="mb-2">THE PROBLEM</Eyebrow>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 items-start">
                         <Heading
                             as="h2"
                             variant="big"

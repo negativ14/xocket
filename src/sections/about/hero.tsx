@@ -29,7 +29,7 @@ export default function AboutHero() {
                         <div className="flex flex-wrap items-center gap-4 shrink-0">
                             <Link
                                 href="#start-mvp"
-                                className="inline-flex items-center gap-3 bg-white text-black font-mono uppercase px-6 py-4 hover:opacity-90 transition-opacity duration-200"
+                                className="inline-flex text-sm md:text-base w-full md:w-auto justify-center items-center gap-2 bg-foreground text-background font-mono tracking-wide uppercase px-6 py-3 hover:opacity-90 transition-opacity duration-200 whitespace-nowrap"
                             >
                                 START MVP PROGRAM
                                 <ArrowUpRight className="w-[18px] h-[18px]" strokeWidth={1.5} />
@@ -37,7 +37,7 @@ export default function AboutHero() {
 
                             <Link
                                 href="/contact-us"
-                                className="inline-flex items-center gap-3 text-white font-mono uppercase px-6 py-4 bg-muted hover:bg-white hover:text-black transition-colors duration-200"
+                                className="inline-flex w-full text-sm md:text-base md:w-auto justify-center items-center gap-2 text-foreground font-mono tracking-wide uppercase px-6 py-3 hover:border-foreground/60 hover:bg-foreground/5 transition-all duration-200 bg-muted/80 whitespace-nowrap"
                             >
                                 BOOK STRATEGY CALL
                                 <ArrowUpRight className="w-[18px] h-[18px]" strokeWidth={1.5} />

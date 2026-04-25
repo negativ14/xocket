@@ -51,7 +51,7 @@ export default function AboutPhiloshophy2() {
             {/* Content */}
             <Container className="relative z-10">
                 {/* ── Top Area: tag + heading/subtext ── */}
-                <div className="flex flex-col gap-10 mb-12">
+                <div className="flex flex-col gap-6 md:gap-12 mb-12">
                     {/* Tag */}
                     <Eyebrow className="mb-2">
                         OUR PHILOSOPHY
