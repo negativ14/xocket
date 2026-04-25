@@ -87,7 +87,11 @@ export default function HowWeWork() {
                                         isActive ? "bg-foreground/4" : "hover:bg-foreground/2",
                                     ].join(" ")}
                                 >
-                                    <div className="flex items-start gap-6 px-6 py-0 h-full lg:pr-16 relative">
+                                    <div className="flex items-center gap-5 px-6 py-0 h-full lg:pr-16 relative">
+                                        {/* Step number */}
+                                        <span className={`font-mono tracking-widest shrink-0 w-6 select-none transition-colors duration-200 ${isActive ? "text-foreground" : "text-foreground/40"}`}>
+                                            {step.index}
+                                        </span>
                                         {/* Content — body always visible, active = full brightness */}
                                         <div className="flex flex-col gap-2 w-full justify-center h-full">
                                             <h3 className={`font-mono text-base tracking-tight transition-colors duration-200 ${isActive ? "text-foreground" : "text-foreground/40 group-hover:text-foreground/60"}`}>
