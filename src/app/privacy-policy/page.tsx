@@ -4,35 +4,39 @@ import Container from "@/components/container";
 // ── Section data ─────────────────────────────────────────────
 const sections = [
     {
-        title: "Information We Collect",
-        body: `Xocket ("we", "us", "our") collects information you provide directly — such as your name, email address, company name, and any details you share through our contact or booking forms. We also collect basic usage data (page views, device type, browser) to understand how visitors interact with our site and improve the experience.`,
+        title: "1. Information We Collect",
+        body: "We may collect basic information such as your name, email address, and usage data when you use our platform. This helps us improve our services and provide a better experience.",
     },
     {
-        title: "How We Use Your Information",
-        body: `We use the information we collect to respond to enquiries, schedule strategy calls, and communicate about potential or ongoing engagements. We do not sell, rent, or trade your personal information to third parties. Your data is only ever used to serve you better.`,
+        title: "2. How We Use Information",
+        body: "We use your information to:\n● Operate and improve Xocket\n● Communicate with you\n● Provide customer support\n● Ensure platform security",
     },
     {
-        title: "Cookies & Analytics",
-        body: `Our website may use cookies and third-party analytics tools (such as Vercel Analytics) to collect aggregated, anonymised usage statistics. These help us understand which pages perform well and where we can improve. You can disable cookies through your browser settings at any time.`,
+        title: "3. Data Sharing",
+        body: "We do not sell your personal data. We may share limited information with trusted third-party services only when necessary to operate our platform (e.g., analytics, payments, or infrastructure).",
     },
     {
-        title: "Data Retention",
-        body: `We retain personal information only for as long as necessary to fulfil the purpose for which it was collected, or as required by law. Enquiry data submitted through our contact forms is retained for a maximum of 24 months unless an active engagement exists.`,
+        title: "4. Data Security",
+        body: "We take reasonable measures to protect your data from unauthorized access, loss, or misuse.",
     },
     {
-        title: "Third-Party Services",
-        body: `We may use third-party services to operate our business — including but not limited to email delivery, scheduling tools, and analytics platforms. These providers process data on our behalf and are bound by their own privacy policies. We choose only reputable providers with strong data protection standards.`,
+        title: "5. Cookies & Tracking",
+        body: "Xocket may use cookies or similar technologies to enhance user experience and analyze usage.",
     },
     {
-        title: "Your Rights",
-        body: `You have the right to request access to, correction of, or deletion of any personal data we hold about you. To exercise any of these rights, please reach out to us directly at the contact details below. We will respond within 30 days.`,
+        title: "6. Your Rights",
+        body: "You can request access, correction, or deletion of your personal data by contacting us.",
     },
     {
-        title: "Contact",
+        title: "7. Updates",
+        body: "We may update this policy from time to time. Continued use of Xocket means you accept the updated policy.",
+    },
+    {
+        title: "8. Contact",
         body: null,
         contact: {
-            text: "If you have questions about this policy or how your data is handled, reach out at",
-            email: "xocket@gmail.com",
+            text: "If you have any questions, contact us at:",
+            email: "vanshpatel@xocket.sh",
         },
     },
 ];
@@ -62,9 +66,7 @@ export default function PrivacyPolicyPage() {
 
                         {/* Intro */}
                         <p className="font-mono leading-7 text-foreground/70 mb-10">
-                            Xocket operates the xocket.com website and related services. This page
-                            informs you of our policies regarding the collection, use, and disclosure
-                            of personal information when you interact with us.
+                            At Xocket, we value your privacy and are committed to protecting your personal information.
                         </p>
 
                         {/* Sections */}
@@ -81,7 +83,7 @@ export default function PrivacyPolicyPage() {
 
                                     {/* Body */}
                                     {section.body && (
-                                        <p className="font-mono leading-7 text-foreground/70 mb-10">
+                                        <p className="font-mono leading-7 text-foreground/70 mb-10 whitespace-pre-wrap">
                                             {section.body}
                                         </p>
                                     )}
@@ -111,10 +113,10 @@ export default function PrivacyPolicyPage() {
                                 AI-accelerated execution for modern startups.
                             </p>
                             <Link
-                                href="mailto:xocket@gmail.com"
+                                href="mailto:vanshpatel@xocket.sh"
                                 className="font-mono text-foreground/40 underline underline-offset-4 hover:text-foreground/70 transition-colors duration-200"
                             >
-                                xocket@gmail.com
+                                vanshpatel@xocket.sh
                             </Link>
                         </div>
                     </div>

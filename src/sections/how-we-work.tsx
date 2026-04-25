@@ -5,7 +5,7 @@ import Image, { StaticImageData } from "next/image";
 import { motion, AnimatePresence } from "motion/react";
 import Container from "@/components/container";
 import howWeWork1 from "@/assets/images/how-we-work.jpg";
-import howWeWork2 from "@/assets/images/how-we-work-2.jpg";
+import howWeWork2 from "@/assets/images/mvp-hero.svg";
 import Eyebrow from "@/components/eyebrow";
 import Heading from "@/components/heading";
 
