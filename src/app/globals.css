@@ -198,7 +198,7 @@
 
 /* Always animate when chroma-text-out-animate class is present */
 .chroma-text-out-animate {
-  animation-duration: 3s;
+  animation-duration: 6s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-name: chroma-move;
@@ -206,7 +206,7 @@
 
 /* Also trigger on group hover (legacy support) */
 .group:hover .chroma-text-out-animate {
-  animation-duration: 3s;
+  animation-duration: 6s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-name: chroma-move;
