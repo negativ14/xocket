@@ -51,14 +51,14 @@ export default function ExecutionStructure() {
             {/* Content */}
             <Container className="relative z-10">
                 {/* ── Top Area: tag + heading/subtext ── */}
-                <div className="flex flex-col gap-10 mb-12">
+                <div className="flex flex-col gap-4 md:gap-8 mb-12">
                     {/* Tag */}
                     <Eyebrow className="mb-2">
                         Structure
                     </Eyebrow>
 
                     {/* Two-column: heading | subtext */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-end">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 items-end">
                         <Heading as="h2" variant="big" className="text-white leading-tight font-sans lg:text-[40px] font-normal">
                             Execution Model
                         </Heading>

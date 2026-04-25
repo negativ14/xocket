@@ -86,7 +86,7 @@ export default function WhoWeWorkWith({
             <Container>
                 {/* Header — centered */}
                 <div className="flex flex-col items-center text-center gap-4 md:gap-8  mb-14">
-                    <Eyebrow>{eyebrow}</Eyebrow>
+                    <Eyebrow className="mb-2">{eyebrow}</Eyebrow>
 
                     <Heading as="h2" variant="big" className="leading-tight">
                         {heading}

@@ -23,7 +23,7 @@ export default function ExecutionHowSprintWork() {
                     </Eyebrow >
 
                     {/* Two-column: heading | subtext */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-end">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 items-end">
                         <Heading as="h2" variant="big" className="font-normal tracking-tight max-w-[600px]">
                             <span className="text-neutral-400 block">We use AI + structured sprints</span>
                             <span className="text-white italic">to move 2–3x faster</span>
@@ -36,7 +36,7 @@ export default function ExecutionHowSprintWork() {
                 </div>
 
                 {/* ── Sprint Features Row ── */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
                     {sprintFeatures.map((feature) => (
                         <div
                             key={feature}

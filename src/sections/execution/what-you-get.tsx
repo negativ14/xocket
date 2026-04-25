@@ -1,17 +1,23 @@
 import Image from "next/image";
-import Link from "next/link";
-import { CircleCheck, ArrowUpRight } from "lucide-react";
 import Container from "@/components/container";
 import Heading from "@/components/heading";
 import heroImage from "@/assets/images/hero-1.jpg";
 import Eyebrow from "@/components/eyebrow";
+import { PlanCard, type Plan } from "@/components/work-with-us";
 
-const deliverablesData = [
-    "Consistent Development Capacity",
-    "Sprint-Based Execution",
-    "Engineering Oversight",
-    "Documentation And Handover"
-];
+const executionPlan: Plan = {
+    title: "Startups receive:",
+    subtitle: "This model provides the flexibility to scale development effort based on product needs.",
+    features: [
+        "Consistent Development Capacity",
+        "Sprint-Based Execution",
+        "Engineering Oversight",
+        "Documentation And Handover"
+    ],
+    cta: "START MVP PROGRAM",
+    href: "#start-mvp",
+    featured: true,
+};
 
 export default function ExecutionWhatYouGet() {
     return (
@@ -62,42 +68,8 @@ export default function ExecutionWhatYouGet() {
                 </div>
 
                 {/* ── Core Card ── */}
-                <div className="relative max-w-[420px] w-full mx-auto">
-                    {/* Corner accents */}
-                    <div className="absolute top-[2px] left-[2px] -translate-y-1/2 -translate-x-1/2 w-[10px] h-[10px] border-t-2 border-l-2 border-white z-20 pointer-events-none" />
-                    <div className="absolute top-[2px] right-[2px] -translate-y-1/2 translate-x-1/2 w-[10px] h-[10px] border-t-2 border-r-2 border-white z-20 pointer-events-none" />
-                    <div className="absolute bottom-[2px] left-[2px] translate-y-1/2 -translate-x-1/2 w-[10px] h-[10px] border-b-2 border-l-2 border-white z-20 pointer-events-none" />
-                    <div className="absolute bottom-[2px] right-[2px] translate-y-1/2 translate-x-1/2 w-[10px] h-[10px] border-b-2 border-r-2 border-white z-20 pointer-events-none" />
-
-                    {/* Card Content */}
-                    <div className="relative bg-white w-full flex flex-col p-8 md:p-10">
-                        <div className="mb-8 flex flex-col gap-2">
-                            <p className="font-sans font-semibold text-[17px] text-background">
-                                Startups receive:
-                            </p>
-                            <p className="font-sans text-[15px] leading-snug tracking-tight text-neutral-700">
-                                This model provides the flexibility to scale<br />
-                                development effort based on product needs.
-                            </p>
-                        </div>
-
-                        <ul className="flex flex-col gap-5">
-                            {deliverablesData.map((item) => (
-                                <li key={item} className="flex items-center gap-4 text-background">
-                                    <CircleCheck className="w-[20px] h-[20px] shrink-0 font-light" strokeWidth={1.2} />
-                                    <span className="font-sans">{item}</span>
-                                </li>
-                            ))}
-                        </ul>
-
-                        <Link
-                            href="#start-mvp"
-                            className="mt-12 flex items-center justify-between w-full bg-background text-foreground px-5 py-3 font-mono tracking-[0.12em] uppercase hover:opacity-90 transition-opacity duration-200"
-                        >
-                            START MVP PROGRAM
-                            <ArrowUpRight className="w-[18px] h-[18px]" />
-                        </Link>
-                    </div>
+                <div className="max-w-[420px] w-full mx-auto">
+                    <PlanCard plan={executionPlan} />
                 </div>
             </Container>
         </section>
