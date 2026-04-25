@@ -37,7 +37,7 @@ export default function CaseStudies({
         <section className={cn("w-full bg-background py-20 lg:py-28", className)}>
             <Container>
                 {/* Header */}
-                <div className="flex flex-col gap-6 mb-16">
+                <div className="flex flex-col gap-4 md:gap-8  mb-16">
                     <Eyebrow className="mb-2">{eyebrow}</Eyebrow>
 
                     <Heading

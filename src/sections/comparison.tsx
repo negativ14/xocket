@@ -97,7 +97,7 @@ export default function Comparison() {
                 <div className="flex flex-col gap-8 mb-14">
                     <Eyebrow>We vs Others</Eyebrow>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-end">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 items-end">
                         <Heading variant="big" className="text-neutral-400 lg:text-[48px]">
                             <span className="text-neutral-400">Move </span>
                             <span className="font-heading text-foreground italic">Faster </span>

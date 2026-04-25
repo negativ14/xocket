@@ -65,7 +65,7 @@ export default function Solution() {
 
 
                     {/* Two-column: heading | subtext */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-end">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 items-end">
                         <Heading as="h2" variant="big" className="text-white leading-tight font-heading lg:text-[40px] font-normal italic">
                             <span className="text-neutral-400 not-italic"> A System Built for{" "}</span>
                             <br />

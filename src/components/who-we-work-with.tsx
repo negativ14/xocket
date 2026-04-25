@@ -85,7 +85,7 @@ export default function WhoWeWorkWith({
         <section className={cn("w-full bg-background py-20 lg:py-28", className)}>
             <Container>
                 {/* Header — centered */}
-                <div className="flex flex-col items-center text-center gap-6 mb-14">
+                <div className="flex flex-col items-center text-center gap-4 md:gap-8  mb-14">
                     <Eyebrow>{eyebrow}</Eyebrow>
 
                     <Heading as="h2" variant="big" className="leading-tight">

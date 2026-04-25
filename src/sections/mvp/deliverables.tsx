@@ -49,7 +49,7 @@ export default function Deliverables() {
 
             <Container className="relative z-10">
                 {/* ── Centered header ── */}
-                <div className="flex flex-col items-center text-center gap-5 lg:gap-6 mb-12 lg:mb-16">
+                <div className="flex flex-col items-center text-center gap-4 md:gap-8 mb-12 lg:mb-16">
                     {/* Tag */}
                     <Eyebrow className="mb-2">
                         WHAT YOU GET
