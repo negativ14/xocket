@@ -20,7 +20,7 @@ export function WorkCardText({ title, body }: WorkCardTextProps) {
             }}
         >
             <motion.h3 
-                className="font-sans text-xl font-semibold text-foreground leading-snug"
+                className="font-sans text-lg lg:text-xl font-semibold text-foreground leading-snug"
                 variants={{
                     hidden: { opacity: 0, y: -10, filter: "blur(4px)" },
                     visible: { opacity: 1, y: 0, filter: "blur(0px)" }
@@ -30,7 +30,7 @@ export function WorkCardText({ title, body }: WorkCardTextProps) {
                 {title}
             </motion.h3>
             <motion.p 
-                className="font-sans text-foreground/50 leading-relaxed"
+                className="font-sans text-base lg:text-lg text-foreground/50 leading-relaxed"
                 variants={{
                     hidden: { opacity: 0, y: -10, filter: "blur(4px)" },
                     visible: { opacity: 1, y: 0, filter: "blur(0px)" }

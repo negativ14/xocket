@@ -18,14 +18,14 @@ export default function FeatureCard({ title, body, icon: Icon, className }: Feat
         <div
             className={cn(
                 "flex flex-col bg-white p-6",
-                haIcon ? "justify-between min-h-[240px]" : "gap-2 min-h-[160px]",
+                haIcon ? "justify-between min-h-[160px] md:min-h-[240px]" : "gap-2 min-h-[120px] md:min-h-[160px]",
                 className
             )}
         >
             {/* Icon at top — only when present */}
             {Icon && (
-                <div>
-                    <Icon className="w-10 h-10 text-background" />
+                <div className="mb-6">
+                    <Icon className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 text-background" />
                 </div>
             )}
 

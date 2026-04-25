@@ -82,8 +82,8 @@ const stats: StatItem[] = [
 function Stat({ value, label }: StatItem) {
     return (
         <div className="flex flex-col items-center gap-1.5">
-            <span className="font-mono text-[40px] font-medium text-foreground">{value}</span>
-            <span className="font-sans text-lg text-foreground/60">{label}</span>
+            <span className="font-mono text-2xl md:text-3xl lg:text-4xl font-medium text-foreground">{value}</span>
+            <span className="font-sans text-center  text-sm md:text-base lg:text-lg text-foreground/60">{label}</span>
         </div>
     );
 }
@@ -117,7 +117,7 @@ export default function Comparison() {
                 {/* ── Comparison Table ── */}
                 <div className="mb-16">
                     {/* Column headers */}
-                    <div className="grid grid-cols-2 mb-3 px-1">
+                    <div className="hidden md:grid md:grid-cols-2 mb-3 px-1">
                         {/* Typical header */}
                         <div className="flex items-center gap-2 px-4">
                             <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-foreground/10">
@@ -144,19 +144,19 @@ export default function Comparison() {
 
                     {/* Rows — relative wrapper holds the gradient center divider */}
                     <div className="relative">
-                        {/* Gradient center divider — uses a CSS mask to fade the line */}
+                        {/* Gradient center divider — hidden on mobile, visible from md */}
                         <div
                             aria-hidden
-                            className="pointer-events-none absolute inset-y-0 left-1/2 -translate-x-px w-px bg-foreground/20"
+                            className="pointer-events-none hidden md:block absolute inset-y-0 left-1/2 -translate-x-px w-px bg-foreground/20"
                             style={{
                                 maskImage: "linear-gradient(to bottom, transparent 0%, black 25%, black 75%, transparent 100%)",
                                 WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 25%, black 75%, transparent 100%)",
                             }}
                         />
-                        {/* Floating VS pill */}
+                        {/* Floating VS pill — hidden on mobile */}
                         <div
                             aria-hidden
-                            className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
+                            className="pointer-events-none hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
                         >
                             <span className="flex items-center justify-center w-7 h-7 rounded-full bg-background border border-foreground/12 font-mono text-[10px] tracking-widest text-foreground select-none">
                                 vs
@@ -167,11 +167,15 @@ export default function Comparison() {
                             const TypicalIcon = row.typicalIcon;
                             return (
                                 <AnimatedListItem key={i}>
-                                    <div className="grid grid-cols-2 group">
+                                    <div className="flex flex-col md:grid md:grid-cols-2 group">
                                         {/* Typical cell */}
-                                        <div className="flex items-center gap-3 px-4 py-5 pr-8">
+                                        <div className="flex items-center gap-3 px-4 py-4 md:py-5 md:pr-8 border-b border-foreground/8 md:border-b-0">
+                                            {/* Mobile label */}
+                                            <span className="md:hidden inline-flex items-center justify-center w-5 h-5 rounded-full bg-foreground/10 shrink-0">
+                                                <X className="w-3 h-3 text-foreground/40" strokeWidth={2.5} />
+                                            </span>
                                             <TypicalIcon
-                                                className="w-4 h-4 shrink-0 text-foreground/25"
+                                                className="hidden md:block w-4 h-4 shrink-0 text-foreground/25"
                                                 strokeWidth={1.5}
                                             />
                                             <span className="font-sans text-base text-foreground/35 leading-snug line-through decoration-foreground/15">
@@ -180,7 +184,7 @@ export default function Comparison() {
                                         </div>
 
                                         {/* Our cell */}
-                                        <div className="flex items-center gap-3 pl-8 pr-4 py-5 transition-colors duration-200 group-hover:bg-foreground/3">
+                                        <div className="flex items-center gap-3 px-4 py-4 md:py-5 md:pl-8 md:pr-4 transition-colors duration-200 group-hover:bg-foreground/3">
                                             <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-foreground/8 shrink-0">
                                                 <Check
                                                     className="w-3 h-3 text-foreground/70"

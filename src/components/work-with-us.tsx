@@ -38,7 +38,7 @@ export function PlanCard({ plan }: { plan: Plan }) {
 
     if (featured) {
         return (
-            <div className="relative flex flex-col justify-between border border-black bg-white p-7">
+            <div className="relative flex flex-col justify-between border border-black bg-white p-4 lg:p-8">
                 <span className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-background" />
                 <span className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-background" />
                 <span className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-background" />
@@ -51,7 +51,7 @@ export function PlanCard({ plan }: { plan: Plan }) {
                 />
                 <Link
                     href={href}
-                    className="mt-12 flex items-center justify-between w-full bg-background text-foreground px-5 py-3 font-mono tracking-[0.12em] uppercase hover:opacity-90 transition-opacity duration-200"
+                    className="mt-6 lg:mt-12 flex items-center justify-center lg:justify-between gap-1.5 w-full bg-background text-foreground px-4 py-2 lg:px-6 lg:py-3 text-xs lg:text-base font-mono tracking-[0.12em] uppercase hover:opacity-90 transition-opacity duration-200 whitespace-nowrap"
                 >
                     {cta}
                     <ArrowUpRight className="w-5 h-5" />
@@ -61,7 +61,7 @@ export function PlanCard({ plan }: { plan: Plan }) {
     }
 
     return (
-        <div className="relative flex flex-col justify-between bg-[#0E0E0E] p-7">
+        <div className="relative flex flex-col justify-between bg-[#0E0E0E] p-4 lg:p-8">
             <span className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-foreground" />
             <span className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-foreground" />
             <span className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-foreground" />
@@ -74,7 +74,7 @@ export function PlanCard({ plan }: { plan: Plan }) {
             />
             <Link
                 href={href}
-                className="mt-12 flex items-center justify-between w-full bg-foreground text-background px-5 py-3 font-mono tracking-[0.12em] uppercase hover:bg-foreground/90 transition-all duration-200"
+                className="mt-6 lg:mt-12 flex items-center justify-center lg:justify-between gap-1.5 w-full bg-foreground text-background px-4 py-2 lg:px-6 lg:py-3 font-mono tracking-[0.12em] text-xs lg:text-base uppercase hover:bg-foreground/90 transition-all duration-200 whitespace-nowrap"
             >
                 {cta}
                 <ArrowUpRight className="w-5 h-5" />

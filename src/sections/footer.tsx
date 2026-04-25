@@ -120,7 +120,7 @@ export default function Footer() {
                     {/* CTA Button */}
                     <Link
                         href="contact-us"
-                        className="inline-flex items-center gap-3 bg-foreground px-8 py-4 font-mono uppercase text-background transition-all duration-200 mt-2"
+                        className="inline-flex text-sm lg:text-base items-center gap-3 bg-foreground px-6 py-3 font-mono uppercase text-background transition-all duration-200 mt-2"
                     >
                         Book A Strategy Call
                         <ArrowUpRight className="w-4 h-4" />

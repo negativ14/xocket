@@ -26,11 +26,11 @@ function WorkCardItem({ icon: Icon, title, body, isLast }: WorkCard & { isLast: 
     return (
         <div
             className={cn(
-                "relative flex flex-col gap-10 p-7 h-[274px] bg-[#0E0E0E] overflow-hidden group",
-                !isLast && "border-r border-foreground/10"
+                "relative flex flex-col gap-4 lg:gap-6 p-4 lg:p-6 h-46 lg:h-[274px] bg-[#0E0E0E] overflow-hidden group",
+                !isLast && "border-b sm:border-r border-foreground/10"
             )}
         >
-            <Icon className="w-10 h-10 text-foreground" strokeWidth={1.5} />
+            <Icon className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 text-foreground shrink-0" strokeWidth={1.5} />
             <FrameMarker className="size-6 stroke-2" />
             <WorkCardText title={title} body={body} />
         </div>
@@ -102,8 +102,8 @@ export default function WhoWeWorkWith({
                     <CornerBrackets />
                     <TickMarks count={cards.length - 1} />
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 ">
-                        {cards.map((card, i) => (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+                        {cards.map((card, i) => ( 
                             <WorkCardItem
                                 key={card.title}
                                 {...card}

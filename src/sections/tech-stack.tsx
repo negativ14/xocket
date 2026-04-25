@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaCode, FaDatabase, FaRobot, FaPencilRuler } from "react-icons/fa";
+import { FaCode, FaRobot } from "react-icons/fa";
 import { SiCloudflare } from "react-icons/si";
 import clsx from "clsx";
 import Heading from "@/components/heading";
@@ -162,7 +162,7 @@ const TechCategoryCard = ({
                 <div
                     className={
                         isFullWidth
-                            ? "grid grid-cols-2 gap-x-8 gap-y-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 pb-6"
+                            ? "grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 pb-6"
                             : "flex flex-col gap-4 pb-6"
                     }
                 >

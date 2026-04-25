@@ -11,12 +11,12 @@ export default function Hero() {
         <section className="relative w-full bg-background overflow-hidden">
             <Container>
                 {/* Main Hero grid — left content / right image */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-0 py-16 lg:py-0 min-h-[850px]">
+                <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-0 py-16 lg:py-0 min-h-[550px] lg:min-h-[850px]">
                     {/* ── Left Column ────────────────────────────── */}
                     <div className="flex flex-col justify-center gap-4 lg:pr-16">
                         {/* Tag badge */}
                         <Eyebrow className="mb-2 ">
-                            From Idea → MVP or Execution Sprints for Scaling Startups.
+                            From Idea → MVP or Execution <span className="hidden md:inline-flex">Sprints for Scaling Startups.</span>
                         </Eyebrow>
 
                         {/* Heading */}
@@ -34,10 +34,10 @@ export default function Hero() {
                         </SubHeading>
 
                         {/* CTA Buttons */}
-                        <div className="flex flex-wrap items-center gap-5 pt-8">
+                        <div className="flex flex-wrap md:flex-nowrap items-center gap-4 pt-8">
                             <Link
                                 href="#start-project"
-                                className="inline-flex items-center gap-2 bg-foreground text-background font-mono tracking-wide uppercase px-6 py-3.5 hover:opacity-90 transition-opacity duration-200"
+                                className="inline-flex text-sm md:text-base w-full md:w-auto justify-center items-center gap-2 bg-foreground text-background font-mono tracking-wide uppercase px-6 py-3 hover:opacity-90 transition-opacity duration-200 whitespace-nowrap"
                             >
                                 Start a Project
                                 <svg
@@ -59,7 +59,7 @@ export default function Hero() {
 
                             <Link
                                 href="#how-it-works"
-                                className="inline-flex items-center gap-2 text-foreground font-mono tracking-wide uppercase px-6 py-3.5 hover:border-foreground/60 hover:bg-foreground/5 transition-all duration-200 bg-muted/80"
+                                className="inline-flex w-full text-sm md:text-base md:w-auto justify-center items-center gap-2 text-foreground font-mono tracking-wide uppercase px-6 py-3 hover:border-foreground/60 hover:bg-foreground/5 transition-all duration-200 bg-muted/80 whitespace-nowrap"
                             >
                                 See How It Works
                                 <svg
@@ -82,7 +82,7 @@ export default function Hero() {
                     </div>
 
                     {/* ── Right Column — Hero Image ───────────────── */}
-                    <div className="relative flex items-center justify-end h-full">
+                    <div className="relative lg:flex items-center justify-end h-full hidden">
                         <div className="relative w-full max-w-[540px] max-h-[738px] lg:h-full overflow-hidden">
                             <Image
                                 src={heroImage}

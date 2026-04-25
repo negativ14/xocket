@@ -22,7 +22,7 @@ export function FeatureCardText({ title, body, haIcon }: FeatureCardTextProps) {
             }}
         >
             <motion.h3 
-                className="font-mono text-xl font-semibold text-background tracking-tighter leading-snug"
+                className="font-mono text-lg lg:text-xl font-semibold text-background tracking-tighter leading-snug"
                 variants={{
                     hidden: { opacity: 0, y: -10, filter: "blur(4px)" },
                     visible: { opacity: 1, y: 0, filter: "blur(0px)" }
@@ -32,7 +32,7 @@ export function FeatureCardText({ title, body, haIcon }: FeatureCardTextProps) {
                 {title}
             </motion.h3>
             <motion.p 
-                className="font-sans text-base text-background/60 leading-relaxed"
+                className="font-sans text-base lg:text-lg text-background/60 leading-relaxed"
                 variants={{
                     hidden: { opacity: 0, y: -10, filter: "blur(4px)" },
                     visible: { opacity: 1, y: 0, filter: "blur(0px)" }
