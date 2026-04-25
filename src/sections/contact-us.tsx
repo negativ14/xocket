@@ -16,7 +16,7 @@ export default function ContactUsHero() {
                     {/* LEFT COLUMN */}
                     <div className="flex flex-col col-span-2">
                         {/* Tag */}
-                        <Eyebrow className="mb-2">
+                        <Eyebrow className="mb-6 md:mb-12">
                             CONTACT US
                         </Eyebrow>
 
@@ -45,7 +45,7 @@ export default function ContactUsHero() {
                     </div>
 
                     {/* RIGHT COLUMN */}
-                    <div className="relative col-span-3 w-full h-full p-4 md:p-6 lg:p-8 xl:p-10 lg:ml-auto max-w-[600px] lg:max-w-none">
+                    <div className="relative col-span-3 w-full h-full p-2 md:p-6 lg:p-8 xl:p-10 lg:ml-auto max-w-[600px] lg:max-w-none">
                         {/* Background Image behind the form */}
                         <div className="absolute inset-0 z-0">
                             <Image
@@ -68,8 +68,8 @@ export default function ContactUsHero() {
                         </div>
 
                         {/* Form Container */}
-                        <div className="relative z-10 bg-[#111111] p-6 sm:p-8 lg:p-10 w-full shadow-2xl">
-                            <form className="flex flex-col gap-6" onSubmit={(e) => e.preventDefault()}>
+                        <div className="relative z-10 bg-[#111111] p-2 sm:p-4 lg:p-10 w-full shadow-2xl">
+                            <form className="flex flex-col gap-4" onSubmit={(e) => e.preventDefault()}>
                                 {/* Name */}
                                 <div className="flex flex-col gap-2.5">
                                     <label className="font-mono tracking-widest uppercase text-white font-medium">NAME</label>
@@ -130,7 +130,7 @@ export default function ContactUsHero() {
                                 </div>
 
                                 {/* Submit Button */}
-                                <button type="submit" className="flex items-center justify-center gap-3 bg-white text-black font-mono tracking-widest uppercase px-6 py-4 hover:opacity-90 transition-opacity duration-200 mt-2">
+                                <button type="submit" className="flex items-center justify-center gap-3 bg-white text-black font-mono tracking-widest uppercase px-6 py-3 text-sm md:text-base hover:opacity-90 transition-opacity duration-200 mt-2">
                                     SUBMIT
                                     <ArrowUpRight className="w-[18px] h-[18px]" strokeWidth={1.5} />
                                 </button>

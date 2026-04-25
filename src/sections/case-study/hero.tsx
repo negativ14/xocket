@@ -20,7 +20,7 @@ export default function CaseStudyHero() {
     return (
         <section className="relative w-full bg-background pt-24 pb-16 lg:pt-32 lg:pb-24 border-b border-border/10">
             <Container>
-                <div className="flex flex-col gap-4 lg:gap-8 max-w-[800px]">
+                <div className="flex flex-col gap-6 md:gap-12 max-w-[800px]">
                     <Heading as="h1" variant="big" className="leading-[1.1] font-normal tracking-tight">
                         <span className="text-neutral-400 block">From Idea to Production</span>
                         <span className="text-neutral-400">Without </span>
