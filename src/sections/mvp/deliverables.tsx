@@ -1,18 +1,24 @@
 import Image from "next/image";
-import Link from "next/link";
-import { CircleCheck, ArrowUpRight } from "lucide-react";
 import Container from "@/components/container";
 import Heading from "@/components/heading";
 import heroImage from "@/assets/images/hero-1.jpg";
 import Eyebrow from "@/components/eyebrow";
+import { PlanCard, type Plan } from "@/components/work-with-us";
 
-const deliverablesData = [
-    "Working MVP product",
-    "Clean Codebase",
-    "Product Documentation",
-    "Deployment Infrastructure",
-    "Technical Handover"
-];
+const mvpPlan: Plan = {
+    title: "MVP Program",
+    subtitle: "At the end of the program, you receive a fully working product ready for real users.",
+    features: [
+        "Working MVP product",
+        "Clean Codebase",
+        "Product Documentation",
+        "Deployment Infrastructure",
+        "Technical Handover",
+    ],
+    cta: "START MVP PROGRAM",
+    href: "/contact-us",
+    featured: true,
+};
 
 export default function Deliverables() {
     return (
@@ -61,36 +67,8 @@ export default function Deliverables() {
                 </div>
 
                 {/* ── Core Card ── */}
-                <div className="relative max-w-[420px] w-full mx-auto">
-                    {/* Corner accents */}
-                    <div className="absolute top-[2px] left-[2px] -translate-y-1/2 -translate-x-1/2 w-[10px] h-[10px] border-t-2 border-l-2 border-white z-20 pointer-events-none" />
-                    <div className="absolute top-[2px] right-[2px] -translate-y-1/2 translate-x-1/2 w-[10px] h-[10px] border-t-2 border-r-2 border-white z-20 pointer-events-none" />
-                    <div className="absolute bottom-[2px] left-[2px] translate-y-1/2 -translate-x-1/2 w-[10px] h-[10px] border-b-2 border-l-2 border-white z-20 pointer-events-none" />
-                    <div className="absolute bottom-[2px] right-[2px] translate-y-1/2 translate-x-1/2 w-[10px] h-[10px] border-b-2 border-r-2 border-white z-20 pointer-events-none" />
-
-                    {/* Card Content */}
-                    <div className="relative bg-white w-full flex flex-col p-8 md:p-10">
-                        <p className="font-sans font-medium text-background mb-8">
-                            Includes:
-                        </p>
-
-                        <ul className="flex flex-col gap-5">
-                            {deliverablesData.map((item) => (
-                                <li key={item} className="flex items-center gap-4 text-background">
-                                    <CircleCheck className="w-[20px] h-[20px] shrink-0 font-light" strokeWidth={1.2} />
-                                    <span className="font-sans">{item}</span>
-                                </li>
-                            ))}
-                        </ul>
-
-                        <Link
-                            href="#start-mvp"
-                            className="mt-12 flex items-center justify-between w-full bg-background text-foreground px-5 py-3 font-mono tracking-[0.12em] uppercase hover:opacity-90 transition-opacity duration-200"
-                        >
-                            START MVP PROGRAM
-                            <ArrowUpRight className="w-[18px] h-[18px]" />
-                        </Link>
-                    </div>
+                <div className="max-w-[420px] w-full mx-auto">
+                    <PlanCard plan={mvpPlan} />
                 </div>
             </Container>
         </section>

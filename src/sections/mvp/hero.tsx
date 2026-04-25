@@ -16,7 +16,7 @@ export default function MvpHero() {
                     <div className="flex flex-col justify-center gap-4 lg:pr-16">
                         {/* Tag badge */}
                         <Eyebrow className="mb-2">
-                            From Idea → MVP or Execution Sprints for Scaling Startups.
+                            From Idea → MVP or Execution <span className="hidden md:inline-flex"> Sprints for Scaling Startups.</span>
                         </Eyebrow>
 
                         {/* Heading */}
@@ -36,7 +36,7 @@ export default function MvpHero() {
                         <div className="flex flex-wrap items-center gap-5 pt-8">
                             <Link
                                 href="#start-mvp"
-                                className="inline-flex items-center gap-2 bg-foreground text-background font-mono tracking-wide uppercase px-6 py-3.5 hover:opacity-90 transition-opacity duration-200"
+                                className="inline-flex text-sm md:text-base w-full md:w-auto justify-center items-center gap-2 bg-foreground text-background font-mono tracking-wide uppercase px-6 py-3 hover:opacity-90 transition-opacity duration-200 whitespace-nowrap"
                             >
                                 Start MVP Program
                                 <svg
@@ -58,7 +58,7 @@ export default function MvpHero() {
 
                             <Link
                                 href="/contact-us"
-                                className="inline-flex items-center gap-2 text-foreground font-mono tracking-wide uppercase px-6 py-3.5 hover:border-foreground/60 hover:bg-foreground/5 transition-all duration-200 bg-muted/80"
+                                className="inline-flex w-full text-sm md:text-base md:w-auto justify-center items-center gap-2 text-foreground font-mono tracking-wide uppercase px-6 py-3 hover:border-foreground/60 hover:bg-foreground/5 transition-all duration-200 bg-muted/80 whitespace-nowrap"
                             >
                                 Book a Call
                                 <svg

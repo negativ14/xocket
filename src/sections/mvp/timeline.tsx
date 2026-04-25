@@ -60,7 +60,7 @@ export default function MvpTimeline() {
         <section className="bg-background py-20 lg:py-32 w-full overflow-hidden">
             <Container>
                 {/* Header section (Two columns) */}
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-10 mb-20 lg:mb-28">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 md:gap-8 mb-20 lg:mb-28">
                     <div className="flex flex-col gap-6">
                         <Eyebrow className="mb-2">
                             Timeline
@@ -81,6 +81,9 @@ export default function MvpTimeline() {
                     {/* Center vertical line — desktop only */}
                     <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-white/15 -translate-x-1/2" />
 
+                    {/* Left border line — mobile only */}
+                    <div className="md:hidden absolute left-[5px] top-0 bottom-0 w-px bg-white/15" />
+
                     <div className="flex flex-col gap-16 lg:gap-20">
                         {timelineData.map((item, index) => {
                             const isEven = index % 2 === 0;
@@ -88,11 +91,14 @@ export default function MvpTimeline() {
                             return (
                                 <div
                                     key={item.week}
-                                    className={`relative flex w-full ${isEven ? "justify-start" : "justify-end"}`}
+                                    className={`relative flex w-full ${isEven ? "md:justify-start" : "md:justify-end"}`}
                                 >
-                                    <div className={`w-full md:w-[48%] flex flex-col gap-5 ${isEven ? "pr-10" : "pl-10"}`}>
-                                        <div className="flex items-center gap-3">
-                                            <span className="shrink-0 w-2.5 h-2.5 bg-white" aria-hidden="true" />
+                                    {/* Mobile dot marker on left border */}
+                                    <span className="md:hidden absolute left-0 top-[10px] w-[11px] h-[11px] bg-white shrink-0 -translate-x-[5px]" aria-hidden="true" />
+
+                                    <div className={`w-full pl-6 md:pl-0 md:w-[48%] flex flex-col gap-5 ${isEven ? "md:pr-10" : "md:pl-10"}`}>
+                                        <div className="flex items-start gap-3">
+                                            <span className="shrink-0 w-2.5 h-2.5 mt-2.5 bg-white hidden md:block" aria-hidden="true" />
                                             <h3 className="font-mono text-xl font-semibold text-white tracking-wide">
                                                 {item.week} : {item.phase}
                                             </h3>
