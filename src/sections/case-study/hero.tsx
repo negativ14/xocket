@@ -20,7 +20,7 @@ export default function CaseStudyHero() {
     return (
         <section className="relative w-full bg-background pt-24 pb-16 lg:pt-32 lg:pb-24 border-b border-border/10">
             <Container>
-                <div className="flex flex-col gap-6 lg:gap-8 max-w-[800px]">
+                <div className="flex flex-col gap-4 lg:gap-8 max-w-[800px]">
                     <Heading as="h1" variant="big" className="leading-[1.1] font-normal tracking-tight">
                         <span className="text-neutral-400 block">From Idea to Production</span>
                         <span className="text-neutral-400">Without </span>
@@ -59,7 +59,7 @@ export default function CaseStudyHero() {
                     <div className="flex justify-center mt-2">
                         <Link
                             href="#case-studies"
-                            className="inline-flex items-center gap-3 bg-[#131313] px-7 py-3.5 md:px-8 md:py-4 font-mono text-[13px] tracking-wider uppercase text-white hover:bg-white hover:text-black transition-colors duration-300"
+                            className="inline-flex items-center gap-3 bg-[#131313] px-6 py-3 font-mono tracking-wider uppercase text-white text-sm lg:text-base hover:bg-white hover:text-black transition-colors duration-300"
                         >
                             SEE MORE
                             <ArrowUpRight className="w-[18px] h-[18px]" strokeWidth={1.5} />
