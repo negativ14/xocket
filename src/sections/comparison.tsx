@@ -1,3 +1,5 @@
+"use client";
+
 import { ElementType } from "react";
 import {
     Clock,
@@ -7,6 +9,8 @@ import {
     Shield,
     ShieldCheck,
     RefreshCw,
+    X,
+    Check,
 } from "lucide-react";
 import Container from "@/components/container";
 import Layers from "@/assets/icons/layers";
@@ -15,7 +19,6 @@ import LogoIcon from "@/assets/images/logo-icon.svg";
 import Image from "next/image";
 import Eyebrow from "@/components/eyebrow";
 import { AnimatedList, AnimatedListItem } from "@/components/animated-list";
-
 
 // ── Types ──────────────────────────────────────────────────
 interface ComparisonRow {
@@ -75,32 +78,12 @@ const stats: StatItem[] = [
     { value: "30%", label: "More Capital-Efficient" },
 ];
 
-// ── Reusable row item ──────────────────────────────────────
-function ComparisonItem({
-    icon: Icon,
-    text,
-    muted = false,
-}: {
-    icon: ElementType;
-    text: string;
-    muted?: boolean;
-}) {
-    return (
-        <div
-            className={`flex items-center gap-4 py-4 last:border-b-0 px-6 ${muted ? "text-foreground/60" : "text-foreground"}`}
-        >
-            <Icon className="w-5 h-5 shrink-0" strokeWidth={1.5} />
-            <span className="font-sans text-xl leading-snug">{text}</span>
-        </div>
-    );
-}
-
-// ── Reusable stat block ────────────────────────────────────
+// ── Stat block ─────────────────────────────────────────────
 function Stat({ value, label }: StatItem) {
     return (
         <div className="flex flex-col items-center gap-1.5">
             <span className="font-mono text-[40px] font-medium text-foreground">{value}</span>
-            <span className="font-sans text-lg text-foreground/80">{label}</span>
+            <span className="font-sans text-lg text-foreground/60">{label}</span>
         </div>
     );
 }
@@ -110,17 +93,11 @@ export default function Comparison() {
     return (
         <section className="w-full bg-background py-20 lg:py-28">
             <Container>
-                {/* ── Header: tag + 2-col (heading | subtext) ── */}
+                {/* ── Header ── */}
                 <div className="flex flex-col gap-8 mb-14">
-                    {/* Tag */}
-                    <Eyebrow>
-                        We vs Others
-                    </Eyebrow>
+                    <Eyebrow>We vs Others</Eyebrow>
 
-
-                    {/* Two-column: heading | subtext */}
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-end">
-                        {/* Mixed-typography heading */}
                         <Heading variant="big" className="text-neutral-400 lg:text-[48px]">
                             <span className="text-neutral-400">Move </span>
                             <span className="font-heading text-foreground italic">Faster </span>
@@ -137,65 +114,89 @@ export default function Comparison() {
                     </div>
                 </div>
 
-                {/* ── Comparison columns ── */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-16">
-                    {/* Left: Typical Approach */}
-                    <div className="flex flex-col gap-4 justify-end">
-                        <p className="font-mono text-xl text-foreground tracking-wider">
-                            Typical Approach
-                        </p>
+                {/* ── Comparison Table ── */}
+                <div className="mb-16">
+                    {/* Column headers */}
+                    <div className="grid grid-cols-2 mb-3 px-1">
+                        {/* Typical header */}
+                        <div className="flex items-center gap-2 px-4">
+                            <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-foreground/10">
+                                <X className="w-3 h-3 text-foreground/40" strokeWidth={2.5} />
+                            </span>
+                            <span className="font-mono text-foreground/80 tracking-wider uppercase">
+                                Typical Approach
+                            </span>
+                        </div>
 
-                        {/* Box with corner brackets */}
-                        <div className="relative border border-foreground/15">
-                            {/* Corner L-brackets */}
-                            <span className="absolute top-0 left-0 w-3 h-3 border-t border-l border-foreground/30" />
-                            <span className="absolute top-0 right-0 w-3 h-3 border-t border-r border-foreground/30" />
-                            <span className="absolute bottom-0 left-0 w-3 h-3 border-b border-l border-foreground/30" />
-                            <span className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-foreground/30" />
-
-                            {/* Inner wrapper isolates divide-y from the absolute corner spans */}
-                            <AnimatedList className="divide-y">
-                                {rows.map((row) => (
-                                    <AnimatedListItem key={row.typicalText}>
-                                        <ComparisonItem
-                                            icon={row.typicalIcon}
-                                            text={row.typicalText}
-                                            muted
-                                        />
-                                    </AnimatedListItem>
-                                ))}
-                            </AnimatedList>
+                        {/* Ours header */}
+                        <div className="flex items-center gap-2 px-4">
+                            <Image
+                                src={LogoIcon}
+                                alt="logo"
+                                className="w-5 h-5"
+                                style={{ width: "auto", height: "20px" }}
+                            />
+                            <span className="font-mono text-foreground tracking-wider uppercase">
+                                Our Approach
+                            </span>
                         </div>
                     </div>
 
-                    {/* Right: Our Approach */}
-                    <div className="flex flex-col gap-4">
-                        <div className="flex items-center gap-2">
-                            <Image src={LogoIcon} alt="logo" className="h-10 w-10" />
-                            <p className="font-mono text-xl text-foreground tracking-wider">
-                                Our Approach
-                            </p>
+                    {/* Rows — relative wrapper holds the gradient center divider */}
+                    <div className="relative">
+                        {/* Gradient center divider — uses a CSS mask to fade the line */}
+                        <div
+                            aria-hidden
+                            className="pointer-events-none absolute inset-y-0 left-1/2 -translate-x-px w-px bg-foreground/20"
+                            style={{
+                                maskImage: "linear-gradient(to bottom, transparent 0%, black 25%, black 75%, transparent 100%)",
+                                WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 25%, black 75%, transparent 100%)",
+                            }}
+                        />
+                        {/* Floating VS pill */}
+                        <div
+                            aria-hidden
+                            className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
+                        >
+                            <span className="flex items-center justify-center w-7 h-7 rounded-full bg-background border border-foreground/12 font-mono text-[10px] tracking-widest text-foreground select-none">
+                                vs
+                            </span>
                         </div>
+                        <AnimatedList className="flex flex-col divide-y divide-foreground/8">
+                        {rows.map((row, i) => {
+                            const TypicalIcon = row.typicalIcon;
+                            const OurIcon = row.ourIcon;
+                            return (
+                                <AnimatedListItem key={i}>
+                                    <div className="grid grid-cols-2 group">
+                                        {/* Typical cell */}
+                                        <div className="flex items-center gap-3 px-4 py-5 pr-8">
+                                            <TypicalIcon
+                                                className="w-4 h-4 shrink-0 text-foreground/25"
+                                                strokeWidth={1.5}
+                                            />
+                                            <span className="font-sans text-base text-foreground/35 leading-snug line-through decoration-foreground/15">
+                                                {row.typicalText}
+                                            </span>
+                                        </div>
 
-                        {/* Box with FrameMarker Plus corners + full border */}
-                        <div className="relative border border-foreground bg-[#0E0E0E] group overflow-hidden">
-                            <span className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-foreground" />
-                            <span className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-foreground" />
-                            <span className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-foreground" />
-                            <span className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-foreground" />
-
-                            {/* Inner wrapper isolates divide-y from the absolute corner spans */}
-                            <AnimatedList className="divide-y divide-foreground/20">
-                                {rows.map((row) => (
-                                    <AnimatedListItem key={row.ourText}>
-                                        <ComparisonItem
-                                            icon={row.ourIcon}
-                                            text={row.ourText}
-                                        />
-                                    </AnimatedListItem>
-                                ))}
-                            </AnimatedList>
-                        </div>
+                                        {/* Our cell */}
+                                        <div className="flex items-center gap-3 pl-8 pr-4 py-5 transition-colors duration-200 group-hover:bg-foreground/3">
+                                            <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-foreground/8 shrink-0">
+                                                <Check
+                                                    className="w-3 h-3 text-foreground/70"
+                                                    strokeWidth={2.5}
+                                                />
+                                            </span>
+                                            <span className="font-sans text-base text-foreground leading-snug">
+                                                {row.ourText}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </AnimatedListItem>
+                            );
+                        })}
+                        </AnimatedList>
                     </div>
                 </div>
 
