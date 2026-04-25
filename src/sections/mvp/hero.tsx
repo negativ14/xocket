@@ -57,7 +57,7 @@ export default function MvpHero() {
                             </Link>
 
                             <Link
-                                href="#book-a-call"
+                                href="/contact-us"
                                 className="inline-flex items-center gap-2 text-foreground font-mono tracking-wide uppercase px-6 py-3.5 hover:border-foreground/60 hover:bg-foreground/5 transition-all duration-200 bg-muted/80"
                             >
                                 Book a Call

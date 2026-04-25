@@ -10,7 +10,7 @@ const plans: Plan[] = [
             "Fast, structured delivery",
         ],
         cta: "START MVP PROGRAM",
-        href: "#mvp",
+        href: "/mvp",
     },
     {
         title: "Execution Sprints",
@@ -21,7 +21,7 @@ const plans: Plan[] = [
             "Clear workflows and rapid delivery",
         ],
         cta: "START MVP PROGRAM",
-        href: "#execution",
+        href: "/execution",
         featured: true,
     },
     {
@@ -33,7 +33,7 @@ const plans: Plan[] = [
             "Long-term product support",
         ],
         cta: "CONTACT SALES",
-        href: "#scaling",
+        href: "/contact-us",
     },
 ];
 

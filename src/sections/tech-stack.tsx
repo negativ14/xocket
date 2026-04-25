@@ -4,6 +4,7 @@ import { SiCloudflare } from "react-icons/si";
 import clsx from "clsx";
 import Heading from "@/components/heading";
 import Eyebrow from "@/components/eyebrow";
+import { BlueprintCorners } from "@/components/blue-print-corners";
 
 const techStackCategories = [
     {
@@ -24,7 +25,7 @@ const techStackCategories = [
         items: [
             { name: "AWS", icon: "/icons/aws_dark.svg" },
             { name: "GCP", icon: "/icons/google-cloud.svg" },
-            { name: "Cloudflare", icon: <SiCloudflare className="h-5 w-5" /> },
+            { name: "Cloudflare", icon: <SiCloudflare className="h-5 w-5" style={{ color: "#F48120" }} /> },
             { name: "Vercel", icon: "/icons/vercel_dark.svg" },
             { name: "Azure", icon: "/icons/azure.svg" },
             { name: "Digital Ocean", icon: "/icons/digitalocean.svg" },
@@ -56,11 +57,11 @@ const techStackCategories = [
         number: "05",
         title: "AI",
         items: [
-            { name: "Vector DB", icon: <FaDatabase className="h-5 w-5" /> },
-            { name: "AI Agents", icon: <FaRobot className="h-5 w-5" /> },
+            { name: "Vector DB", icon: "/icons/vectordb-full.png" },
+            { name: "AI Agents", icon: <FaRobot className="h-5 w-5 text-foreground/60" /> },
             { name: "OpenAI", icon: "/icons/openai_dark.svg" },
             { name: "ClaudeAI", icon: "/icons/claude-ai-icon.svg" },
-            { name: "Knowledge Graph", icon: <FaDatabase className="h-5 w-5" /> },
+            { name: "Knowledge Graph", icon: "/icons/knowledge-graph.png" },
         ],
     },
     {
@@ -69,8 +70,8 @@ const techStackCategories = [
         items: [
             { name: "Figma", icon: "/icons/figma.svg" },
             { name: "Framer", icon: "/icons/framer_dark.svg" },
-            { name: "Unicorn Studio", icon: <FaPencilRuler className="h-5 w-5" /> },
-            { name: "Spline 3D", icon: <FaPencilRuler className="h-5 w-5" /> },
+            { name: "Unicorn Studio", icon: "/icons/unicorn.jpg" },
+            { name: "Spline 3D", icon: "/icons/spline-logo.png" },
             { name: "Webflow", icon: "/icons/webflow.svg" },
             { name: "Lottie", icon: "/icons/lottielab.svg" },
         ],
@@ -80,29 +81,18 @@ const techStackCategories = [
         title: "AI TOOLING",
         items: [
             { name: "Google Antigravity", icon: "/icons/antigravity.svg" },
-            { name: "Claude Code", icon: null },
+            { name: "Claude Code", icon: "/icons/claude-ai-icon.svg" },
             { name: "Lovable", icon: "/icons/lovable.svg" },
-            { name: "Base44", icon: null },
+            { name: "Base44", icon: "/icons/base44.webp" },
             { name: "Replit", icon: "/icons/replit.svg" },
-            { name: "Cursor AI", icon: "/icons/cursor_light.svg" },
+            { name: "Cursor AI", icon: "/icons/cursor.png" },
             { name: "Copilot", icon: "/icons/copilot_dark.svg" },
             { name: "Bolt", icon: "/icons/bolt-new_dark.svg" },
-            { name: "Code Rabbit", icon: null },
+            { name: "Code Rabbit", icon: "/icons/coderabbit.svg" },
         ],
     },
 ];
 
-const BlueprintCorners = () => (
-    <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 z-10 rounded-lg"
-    >
-        <div className="absolute -left-px -top-px h-3 w-3 border-l-2 border-t-2 border-white opacity-0 transition-all duration-300 group-hover:opacity-100" />
-        <div className="absolute -right-px -top-px h-3 w-3 border-r-2 border-t-2 border-white opacity-0 transition-all duration-300 group-hover:opacity-100" />
-        <div className="absolute -bottom-px -left-px h-3 w-3 border-b-2 border-l-2 border-white opacity-0 transition-all duration-300 group-hover:opacity-100" />
-        <div className="absolute -bottom-px -right-px h-3 w-3 border-b-2 border-r-2 border-white opacity-0 transition-all duration-300 group-hover:opacity-100" />
-    </div>
-);
 
 const TechItem = ({
     name,
@@ -111,7 +101,7 @@ const TechItem = ({
     name: string;
     icon: string | React.ReactNode | null;
 }) => {
-    const FallbackIcon = <FaCode className="h-5 w-5" />;
+    const FallbackIcon = <FaCode className="h-5 w-5 text-foreground/40" />;
 
     const renderIcon = () => {
         if (typeof icon === "string") {
@@ -130,7 +120,7 @@ const TechItem = ({
 
     return (
         <div className="flex items-start gap-3 px-6">
-            <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center text-zinc-500">
+            <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center">
                 {renderIcon()}
             </div>
             <p className="text-sm font-medium text-white">{name}</p>

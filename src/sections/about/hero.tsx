@@ -36,7 +36,7 @@ export default function AboutHero() {
                             </Link>
 
                             <Link
-                                href="#book-a-call"
+                                href="/contact-us"
                                 className="inline-flex items-center gap-3 text-white font-mono uppercase px-6 py-4 bg-muted hover:bg-white hover:text-black transition-colors duration-200"
                             >
                                 BOOK STRATEGY CALL

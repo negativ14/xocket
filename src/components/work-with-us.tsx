@@ -8,6 +8,7 @@ import Eyebrow from "@/components/eyebrow";
 import heroImage from "@/assets/images/buildings.png";
 import { cn } from "@/lib/utils";
 import { AnimatedPlanCardContent } from "./animated-plan-card-content";
+import { BlueprintCorners } from "./blue-print-corners";
 
 // ── Types ──────────────────────────────────────────────────
 export interface Plan {
@@ -37,12 +38,16 @@ export function PlanCard({ plan }: { plan: Plan }) {
 
     if (featured) {
         return (
-            <div className="relative flex flex-col justify-between bg-white p-7">
-                <AnimatedPlanCardContent 
-                    title={title} 
-                    subtitle={subtitle} 
-                    features={features} 
-                    featured={true} 
+            <div className="relative flex flex-col justify-between border border-black bg-white p-7">
+                <span className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-background" />
+                <span className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-background" />
+                <span className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-background" />
+                <span className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-background" />
+                <AnimatedPlanCardContent
+                    title={title}
+                    subtitle={subtitle}
+                    features={features}
+                    featured={true}
                 />
                 <Link
                     href={href}
@@ -57,15 +62,15 @@ export function PlanCard({ plan }: { plan: Plan }) {
 
     return (
         <div className="relative flex flex-col justify-between bg-[#0E0E0E] p-7">
-            <span className="absolute top-0 left-0 w-4 h-4 border-t border-l border-foreground/40" />
-            <span className="absolute top-0 right-0 w-4 h-4 border-t border-r border-foreground/40" />
-            <span className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-foreground/40" />
-            <span className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-foreground/40" />
-            <AnimatedPlanCardContent 
-                title={title} 
-                subtitle={subtitle} 
-                features={features} 
-                featured={false} 
+            <span className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-foreground" />
+            <span className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-foreground" />
+            <span className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-foreground" />
+            <span className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-foreground" />
+            <AnimatedPlanCardContent
+                title={title}
+                subtitle={subtitle}
+                features={features}
+                featured={false}
             />
             <Link
                 href={href}
