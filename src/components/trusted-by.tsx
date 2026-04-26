@@ -34,7 +34,8 @@ export default function TrustedBy() {
                 {/* Top label row */}
 
                 <Heading className="font-sans text-center py-4 md:py-8">
-                    <span className="text-muted-foreground">Trusted by</span> Startups
+                    <span className="text-muted-foreground">Trusted by</span> startups, founders, teams, and VCs
+
                 </Heading>
 
                 {/* Grid — 4×2 with bordered cells */}
